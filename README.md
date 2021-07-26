@@ -1,3 +1,9 @@
+#Run Local Server
+```bash
+D:\webapp\OneLedger>python manage.py runserver
+```
+
+
 #My First Heading
 ```
 ProjectsNtpc.objects.values_list('projectname','sox_pkg').filter(sox='F')
