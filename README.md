@@ -2,6 +2,11 @@
 ```bash
 D:\webapp\OneLedger>python manage.py runserver
 ```
+#Open Shell
+```bash
+D:\webapp\OneLedger>python manage.py shell
+```
+
 
 
 #My First Heading
