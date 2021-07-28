@@ -21,6 +21,11 @@ Packages.objects.values_list('id','project')
 ```bash
 https://www.makeareadme.com/
 ```
+#Install Packages in Django
+```bash
+pip install django-tables2
+```
+
 
 Packages.objects.values_list('project').filter(package='FGD')
 
