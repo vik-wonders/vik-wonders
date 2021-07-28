@@ -12,7 +12,7 @@ D:\webapp\OneLedger>python manage.py shell
 $ python manage.py inspectdb table1 table2
 ```
 
-#My First Heading
+###My First Heading
 ```
 ProjectsNtpc.objects.values_list('projectname','sox_pkg').filter(sox='F')
 Packages.objects.values_list('id','project')
