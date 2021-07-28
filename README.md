@@ -19,6 +19,7 @@ Packages.objects.values_list('id','project')
 ```
 # Important Links
 ```bash
+https://www.markdownguide.org/cheat-sheet/
 https://www.makeareadme.com/
 https://django-tables2.readthedocs.io/en/latest/
 ```
