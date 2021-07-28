@@ -17,9 +17,10 @@ $ python manage.py inspectdb table1 table2
 ProjectsNtpc.objects.values_list('projectname','sox_pkg').filter(sox='F')
 Packages.objects.values_list('id','project')
 ```
-#Help
+#Important Links
 ```bash
 https://www.makeareadme.com/
+https://django-tables2.readthedocs.io/en/latest/
 ```
 #Install Packages in Django
 ```bash
