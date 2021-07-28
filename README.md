@@ -7,6 +7,8 @@ D:\webapp\OneLedger>python manage.py runserver
 D:\webapp\OneLedger>python manage.py shell
 ```
 
+#Inspect DB
+$ python manage.py inspectdb table1 table2
 
 
 #My First Heading
