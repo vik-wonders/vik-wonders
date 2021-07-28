@@ -1,13 +1,13 @@
-# Run Local Server
+## Run Local Server
 ```bash
 D:\webapp\OneLedger>python manage.py runserver
 ```
-# Open Shell
+## Open Shell
 ```bash
 D:\webapp\OneLedger>python manage.py shell
 ```
 
-# Inspect DB
+## Inspect DB
 ```
 $ python manage.py inspectdb table1 table2
 ```
@@ -17,18 +17,18 @@ $ python manage.py inspectdb table1 table2
 ProjectsNtpc.objects.values_list('projectname','sox_pkg').filter(sox='F')
 Packages.objects.values_list('id','project')
 ```
-# Important Links
+## Important Links
 ```bash
 https://www.markdownguide.org/cheat-sheet/
 https://www.makeareadme.com/
 https://django-tables2.readthedocs.io/en/latest/
 ```
-# Install Packages in Django
+## Install Packages in Django
 ```bash
 pip install django-tables2
 ```
 
-# Some Queries
+## Some Queries
 `
 Packages.objects.values_list('project').filter(package='FGD')
 Packages.objects.values_list('id','project').filter(id__in=ProjectsNtpc.objects.values_list('sox_pkg').filter(sox='F'))
