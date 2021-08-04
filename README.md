@@ -28,6 +28,11 @@ https://django-tables2.readthedocs.io/en/latest/
 pip install django-tables2
 ```
 
+## Performing Raw Query
+```
+https://docs.djangoproject.com/en/3.2/topics/db/sql/
+```
+
 ## Some Queries
 ```
 1. Packages.objects.values_list('project').filter(package='FGD')
