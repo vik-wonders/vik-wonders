@@ -65,3 +65,24 @@ import pandas as pd
 import numpy as np
 import openpyxl
 ```
+
+### Add sqlalchemy in Settings.py
+```
+INSTALLED_APPS = [
+    'sqlalchemy',
+    'core',
+    'capex',
+    'mis',
+    'packages',
+    'projects',
+    'vendors',
+    'django_tables2',
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'django.contrib.humanize',
+]
+```
