@@ -50,3 +50,18 @@ def my_custom_sql():
 6. ProjectsNtpc.objects.values_list('projectname','fuel').filter(fuel__in= ['Coal','Hydro']).filter
 7. (projectname__in=Milestones.objects.values_list('project').filter(milestone='TOC').exclude(achieved='A'))
 ```
+## Working with Pandas
+### Install Packaghes
+```
+pip install pandas
+pip install numpy
+pip install openpyxl
+pip install sqlalchemy
+```
+### Import Packaghes
+```
+from sqlalchemy import create_engine
+import pandas as pd
+import numpy as np
+import openpyxl
+```
