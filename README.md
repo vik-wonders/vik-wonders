@@ -1,6 +1,12 @@
+## Install Packages in Django
+```bash
+pip install django-tables2
+```
+
 ## Run Local Server
 ```bash
 D:\webapp\OneLedger>python manage.py runserver
+D:\webapp\OneLedger>python manage.py runserver 0.0.0.0:8000
 ```
 ## Open Shell
 ```bash
@@ -23,11 +29,6 @@ https://www.markdownguide.org/cheat-sheet/
 https://www.makeareadme.com/
 https://django-tables2.readthedocs.io/en/latest/
 ```
-## Install Packages in Django
-```bash
-pip install django-tables2
-```
-
 ## Performing Raw Query
 ```
 https://docs.djangoproject.com/en/3.2/topics/db/sql/
