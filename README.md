@@ -86,3 +86,7 @@ INSTALLED_APPS = [
     'django.contrib.humanize',
 ]
 ```
+### Date Time Formats
+```
+https://www.programiz.com/python-programming/datetime/strftime
+```
