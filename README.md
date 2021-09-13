@@ -93,5 +93,25 @@ https://www.programiz.com/python-programming/datetime/strftime
 
 ### Rename dataframe Column Name
 ```
-df = df.rename(columns={'Age Group': 'age_group'})
+    df1 = df1.rename(columns={'act_ant_date_status': 'Act/Ant Date'})
+
+```
+### Re-order Dataframe columns
+```
+column_order = ["BES", "BDL", "CES", "TGES", "BHT", "BLU", "TGBU", "SBC", "TGOFC", "CHP", "AHP", "SYNC","FL","TOC","COD"]
+
+df1 = pd.pivot_table(df, index=["Project/Unit"], columns="Milestone", values=["act_ant_date_status"], fill_value="", margins=False, margins_name='Total', sort=False, aggfunc="first")
+
+df1_renindexed = df1.reindex(columns=column_order, level=1)
+
+```
+
+### Conditional Highlight DataFrame HTML Table
+```
+    styleobj = df1_renindexed.style.applymap(lambda x: 'background-color : lightgreen;border:1px solid' if x.count(' A') > 0 else 'border:1px solid')
+```
+
+### Apply attributes to DataFrame HTML Table
+```
+output = styleobj.set_table_attributes('class="table table-stripped table-bordered display" style="width: 100%"')
 ```
