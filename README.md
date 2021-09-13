@@ -90,3 +90,8 @@ INSTALLED_APPS = [
 ```
 https://www.programiz.com/python-programming/datetime/strftime
 ```
+
+### Rename dataframe Column Name
+```
+df = df.rename(columns={'Age Group': 'age_group'})
+```
