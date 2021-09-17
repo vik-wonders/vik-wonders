@@ -114,3 +114,9 @@ styleobj = df1_renindexed.style.applymap(lambda x: 'background-color : lightgree
 ```
 output = styleobj.set_table_attributes('class="table table-stripped table-bordered display" style="width: 100%"')
 ```
+### Set Precision in Dataframe values
+```
+    df=pd.read_sql(mysql_qry1,dbConnection)
+    df.head()
+    pd.set_option('precision',0)
+```
