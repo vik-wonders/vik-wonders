@@ -130,18 +130,13 @@ output = styleobj.set_table_attributes('class="table table-stripped table-border
     df.head()
     pd.set_option('precision',0)
 
-
     df_pivot = pd.pivot_table(df, index=["FY", "Project"],values=["Capacity"],aggfunc=[np.sum],margins=True,margins_name='Grand Total')
 
     df_subtotal = pd.concat([df_pivot, df_pivot.sum(level=[0]).assign(new_col='~<span class=bg-info>Year-SubTotal</span>').set_index('new_col', append=True)]).sort_index(level=[0])
     #df_cumsum=df_subtotal.cumsum()
 
-
-
-
     styleobj =df_subtotal.style.apply(lambda x: ['background: lightgreen' if x.name == 'Year-SubTotal' else 'background: lightblue' for i in x],axis=0)
 
     output = styleobj.set_table_attributes('class="table p-0 table-stripped table-bordered  milestones" style="width: 100%"')
     return output.to_html()
-
 ```
