@@ -120,3 +120,28 @@ output = styleobj.set_table_attributes('class="table table-stripped table-border
     df.head()
     pd.set_option('precision',0)
 ```
+
+### Subtotal in Dataframe
+```
+
+    mysql_qry1 = "select case when month(commng_date) <=3 then YEAR(commng_date) - 1 else YEAR(commng_date ) end as FY, concat(c.project,' U#',convert(c.unit,char(2))) as Project,capacity as 'Capacity' from vw_commng_mile c where achieved = 'A' ORDER BY `fy` ASC"
+
+    df=pd.read_sql(mysql_qry1,dbConnection)
+    df.head()
+    pd.set_option('precision',0)
+
+
+    df_pivot = pd.pivot_table(df, index=["FY", "Project"],values=["Capacity"],aggfunc=[np.sum],margins=True,margins_name='Grand Total')
+
+    df_subtotal = pd.concat([df_pivot, df_pivot.sum(level=[0]).assign(new_col='~<span class=bg-info>Year-SubTotal</span>').set_index('new_col', append=True)]).sort_index(level=[0])
+    #df_cumsum=df_subtotal.cumsum()
+
+
+
+
+    styleobj =df_subtotal.style.apply(lambda x: ['background: lightgreen' if x.name == 'Year-SubTotal' else 'background: lightblue' for i in x],axis=0)
+
+    output = styleobj.set_table_attributes('class="table p-0 table-stripped table-bordered  milestones" style="width: 100%"')
+    return output.to_html()
+
+```
