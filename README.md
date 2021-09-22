@@ -140,3 +140,8 @@ output = styleobj.set_table_attributes('class="table table-stripped table-border
     output = styleobj.set_table_attributes('class="table p-0 table-stripped table-bordered  milestones" style="width: 100%"')
     return output.to_html()
 ```
+
+### Pandas help for Subtotal
+```
+https://stackoverflow.com/questions/49881751/multiindex-pivot-table-with-subtotals-in-pandas
+```
