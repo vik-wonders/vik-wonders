@@ -62,8 +62,8 @@ pip install sqlalchemy
 ```diff
 - from sqlalchemy import create_engine
 + import pandas as pd
-@ import numpy as np
-# import openpyxl
+! import numpy as np
+@@ import openpyxl
 ```
 
 ### Add sqlalchemy in Settings.py
