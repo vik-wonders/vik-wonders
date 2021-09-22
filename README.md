@@ -59,11 +59,11 @@ pip install openpyxl
 pip install sqlalchemy
 ```
 ### Import Packaghes
-```
-from sqlalchemy import create_engine
-import pandas as pd
-import numpy as np
-import openpyxl
+```diff
+- from sqlalchemy import create_engine
++ import pandas as pd
+@ import numpy as np
+# import openpyxl
 ```
 
 ### Add sqlalchemy in Settings.py
