@@ -145,3 +145,8 @@ output = styleobj.set_table_attributes('class="table table-stripped table-border
 ```
 https://stackoverflow.com/questions/49881751/multiindex-pivot-table-with-subtotals-in-pandas
 ```
+
+### ASP .NET Page LifeCycle
+```
+https://docs.microsoft.com/en-us/previous-versions/dotnet/articles/ms972976(v=msdn.10)?redirectedfrom=MSDN
+```
