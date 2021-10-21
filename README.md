@@ -150,3 +150,8 @@ https://stackoverflow.com/questions/49881751/multiindex-pivot-table-with-subtota
 ```
 https://docs.microsoft.com/en-us/previous-versions/dotnet/articles/ms972976(v=msdn.10)?redirectedfrom=MSDN
 ```
+
+### Power BI Table S.No
+```
+sno=calculate( countrows(table),filter(allselected(table),table[column] <= max(table[column])))
+```
