@@ -42,6 +42,10 @@ def my_custom_sql():
 
 ## Some Queries
 ```
+{{project_capex_annual_target|floatformat:2}}
+
+CapexTarget.objects.filter(company_code__in=ProjectsNtpc.objects.values('projectcode').filter(projectname='Barh-I')).aggregate(Sum('dco'))["dco__sum"]
+
 1. Packages.objects.values_list('project').filter(package='FGD')
 2. Packages.objects.values_list('id','project').filter(id__in=ProjectsNtpc.objects.values_list('sox_pkg').filter(sox='F'))
 3. D:\webapp\OneLedger>python manage.py inspectdb MileStones capex_package_po >core.test.py
