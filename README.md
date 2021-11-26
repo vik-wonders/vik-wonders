@@ -159,3 +159,11 @@ https://docs.microsoft.com/en-us/previous-versions/dotnet/articles/ms972976(v=ms
 ```
 sno=calculate( countrows(table),filter(allselected(table),table[column] <= max(table[column])))
 ```
+
+### Manage user RDP sessions on Windows Server 2012
+```
+PS C:\Windows\system32> quser
+ USERNAME              SESSIONNAME        ID  STATE   IDLE TIME  LOGON TIME
+>SomeUser              console             1  Active      none   8/16/2015 5:29 PM
+PS C:\Windows\system32> logoff <sessionID>
+```
