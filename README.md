@@ -19,20 +19,20 @@ $ python manage.py inspectdb table1 table2
 ```
 
 ## My First Heading
-```
+```python
 ProjectsNtpc.objects.values_list('projectname','sox_pkg').filter(sox='F')
 Packages.objects.values_list('id','project')
 ```
 ## Important Links
-```bash
 https://www.markdownguide.org/cheat-sheet/
 https://www.makeareadme.com/
 https://django-tables2.readthedocs.io/en/latest/
-```
+
 ## Performing Raw Query
-```python
+
 https://docs.djangoproject.com/en/3.2/topics/db/sql/
 
+```python
 def my_custom_sql():
     with connection.cursor() as cursor:
         cursor.execute("SELECT p.commonname as Project, P_PAY_BAREA, (p_payment_run_date) as pdate, date_format(p_payment_run_date,'%b-%y') as pdate1 , ifnull(round(sum(P_PAY_AMOUNT) / 10000000,2),0) as Amount FROM capex_pradip_data c Join Projects_ntpc p on c.P_PAY_BAREA= p.projectcode and ( P_PAY_DOC_PAYMENT_METHOD in ('M','O','A') or (p_po_number like '55000%' and P_PAY_DOC_PAYMENT_METHOD in ('C','D','L','G','B')) ) and p_payment_run_date between '2021-04-01' and '2022-03-31' and p_payment_status in ('Processed') and P_PAY_BAREA='1028' group by pdate1 ORDER BY pdate ASC")
@@ -146,14 +146,14 @@ output = styleobj.set_table_attributes('class="table table-stripped table-border
 ```
 
 ### Pandas help for Subtotal
-```html
+
 https://stackoverflow.com/questions/49881751/multiindex-pivot-table-with-subtotals-in-pandas
-```
+
 
 ### ASP .NET Page LifeCycle
-```
+
 https://docs.microsoft.com/en-us/previous-versions/dotnet/articles/ms972976(v=msdn.10)?redirectedfrom=MSDN
-```
+
 
 ### Power BI Table S.No
 ```
@@ -170,11 +170,10 @@ PS C:\Windows\system32> logoff <sessionID>
 
 ### Datatables.net excel export hyperlink rendering for Safety Ledger
 
-```html
 https://stackoverflow.com/questions/40243616/jquery-datatables-export-to-excelhtml5-hyperlink-issue
 https://datatables.net/extensions/buttons/examples/html5/excelTextBold.html
 https://datatables.net/reference/button/excelHtml5#Built-in-styles
-```
+
 
 ```javascript
 buttons: [ {
