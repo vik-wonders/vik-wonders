@@ -196,10 +196,10 @@ buttons: [ {
 ### Marked Down Language Code Blocks
 
 ###### Basic Formatting
-```
+
 https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
-```
+
 ###### Code blocking highlighting
-```
+
 https://rdmd.readme.io/docs/code-blocks
-```
+
