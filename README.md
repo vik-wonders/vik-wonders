@@ -161,7 +161,7 @@ sno=calculate( countrows(table),filter(allselected(table),table[column] <= max(t
 ```
 
 ### Manage user RDP sessions on Windows Server 2012
-```
+```shell
 PS C:\Windows\system32> quser
  USERNAME              SESSIONNAME        ID  STATE   IDLE TIME  LOGON TIME
 >SomeUser              console             1  Active      none   8/16/2015 5:29 PM
