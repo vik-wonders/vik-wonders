@@ -91,7 +91,7 @@ INSTALLED_APPS = [
 ]
 ```
 ### Date Time Formats
-```
+```html
 https://www.programiz.com/python-programming/datetime/strftime
 ```
 
@@ -146,7 +146,7 @@ output = styleobj.set_table_attributes('class="table table-stripped table-border
 ```
 
 ### Pandas help for Subtotal
-```
+```html
 https://stackoverflow.com/questions/49881751/multiindex-pivot-table-with-subtotals-in-pandas
 ```
 
@@ -170,11 +170,13 @@ PS C:\Windows\system32> logoff <sessionID>
 
 ### Datatables.net excel export hyperlink rendering for Safety Ledger
 
-```javascript
+```html
 https://stackoverflow.com/questions/40243616/jquery-datatables-export-to-excelhtml5-hyperlink-issue
 https://datatables.net/extensions/buttons/examples/html5/excelTextBold.html
 https://datatables.net/reference/button/excelHtml5#Built-in-styles
+```
 
+```javascript
 buttons: [ {
 			extend: 'excelHtml5',
 			customize: function( xlsx ) {
