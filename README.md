@@ -167,3 +167,26 @@ PS C:\Windows\system32> quser
 >SomeUser              console             1  Active      none   8/16/2015 5:29 PM
 PS C:\Windows\system32> logoff <sessionID>
 ```
+
+### Datatables.net excel export hyperlink rendering for Safety Ledger
+
+```
+https://stackoverflow.com/questions/40243616/jquery-datatables-export-to-excelhtml5-hyperlink-issue
+https://datatables.net/extensions/buttons/examples/html5/excelTextBold.html
+https://datatables.net/reference/button/excelHtml5#Built-in-styles
+
+buttons: [ {
+			extend: 'excelHtml5',
+			customize: function( xlsx ) {
+				var sheet = xlsx.xl.worksheets['sheet1.xml'];
+
+				$('row c[r^="I"]', sheet).each(function () {
+						$(this).attr('t', 'str');
+						$(this).append('<f>' + 'HYPERLINK("' + $('is t', this).text() + '","link")' + '</f>');
+						$('is', this).remove();
+						$(this).attr( 's', '4' );
+				});
+			}
+		} ],
+
+```
