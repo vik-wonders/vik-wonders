@@ -14,7 +14,7 @@ D:\webapp\OneLedger>python manage.py shell
 ```
 
 ## Inspect DB
-```
+```python
 $ python manage.py inspectdb table1 table2
 ```
 
@@ -30,7 +30,7 @@ https://www.makeareadme.com/
 https://django-tables2.readthedocs.io/en/latest/
 ```
 ## Performing Raw Query
-```
+```python
 https://docs.djangoproject.com/en/3.2/topics/db/sql/
 
 def my_custom_sql():
@@ -41,7 +41,7 @@ def my_custom_sql():
 ```
 
 ## Some Queries
-```
+```python
 {{project_capex_annual_target|floatformat:2}}
 
 CapexTarget.objects.filter(company_code__in=ProjectsNtpc.objects.values('projectcode').filter(projectname='Barh-I')).aggregate(Sum('dco'))["dco__sum"]
@@ -56,7 +56,7 @@ CapexTarget.objects.filter(company_code__in=ProjectsNtpc.objects.values('project
 ```
 ## Working with Pandas
 ### Install Packaghes
-```
+```python
 pip install pandas
 pip install numpy
 pip install openpyxl
@@ -71,7 +71,7 @@ pip install sqlalchemy
 ```
 
 ### Add sqlalchemy in Settings.py
-```
+```python
 INSTALLED_APPS = [
     'sqlalchemy',
     'core',
@@ -96,11 +96,11 @@ https://www.programiz.com/python-programming/datetime/strftime
 ```
 
 ### Rename dataframe Column Name
-```
+```python
 df1 = df1.rename(columns={'act_ant_date_status': 'Act/Ant Date'})
 ```
 ### Re-order Dataframe columns
-```
+```python
 column_order = ["BES", "BDL", "CES", "TGES", "BHT", "BLU", "TGBU", "SBC", "TGOFC", "CHP", "AHP", "SYNC","FL","TOC","COD"]
 
 df1 = pd.pivot_table(df, index=["Project/Unit"], columns="Milestone", values=["act_ant_date_status"], fill_value="", margins=False, margins_name='Total', sort=False, aggfunc="first")
@@ -119,14 +119,14 @@ styleobj = df1_renindexed.style.applymap(lambda x: 'background-color : lightgree
 output = styleobj.set_table_attributes('class="table table-stripped table-bordered display" style="width: 100%"')
 ```
 ### Set Precision in Dataframe values
-```
+```python
     df=pd.read_sql(mysql_qry1,dbConnection)
     df.head()
     pd.set_option('precision',0)
 ```
 
 ### Subtotal in Dataframe
-```
+```python
 
     mysql_qry1 = "select case when month(commng_date) <=3 then YEAR(commng_date) - 1 else YEAR(commng_date ) end as FY, concat(c.project,' U#',convert(c.unit,char(2))) as Project,capacity as 'Capacity' from vw_commng_mile c where achieved = 'A' ORDER BY `fy` ASC"
 
