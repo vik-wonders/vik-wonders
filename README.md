@@ -168,7 +168,7 @@ PS C:\Windows\system32> quser
 PS C:\Windows\system32> logoff <sessionID>
 ```
 
-### Datatables.net excel export hyperlink rendering for Safety Ledger
+### Datatables.net excel export hyperlink rendering for Safety Register Dashboard
 
 https://stackoverflow.com/questions/40243616/jquery-datatables-export-to-excelhtml5-hyperlink-issue
 https://datatables.net/extensions/buttons/examples/html5/excelTextBold.html
