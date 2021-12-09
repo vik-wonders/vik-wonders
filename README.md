@@ -202,3 +202,88 @@ https://docs.github.com/en/github/writing-on-github/getting-started-with-writing
 
 https://rdmd.readme.io/docs/code-blocks
 
+
+### Excel Sheet Custom Pop-up
+```
+https://www.youtube.com/watch?v=yFqJCCEsi_Y
+
+
+Option Explicit
+
+Private Sub Worksheet_SelectionChange(ByVal Target As Range)
+    If Not Intersect(Target, Range("D4:M220")) Is Nothing Then
+        Range("D4:M220").ClearComments 'Clear any existing comments in the range
+        Range("B4").Value = Target.Row
+        ShowPictureIcon
+    Else:
+        Shapes("AddPicBtn").Visible = msoFalse
+    End If
+    'Add Picture as comment
+    If Not Intersect(Target, Range("D4:D220")) Is Nothing Then ShowPictureAsComment
+    
+    'Add Standard Comment with Dynamic content
+    If Not Intersect(Target, Range("E4:E220")) Is Nothing Then CreateDynamicComment
+    
+    'Add Formatted Comment with Dynamic Content
+    If Not Intersect(Target, Range("G4:G220")) Is Nothing Then CreateFormattedComment
+    
+    'Add Dynamic Chart As Popup
+    If Not Intersect(Target, Range("L4:L220")) Is Nothing Then CreateCommentChartPic
+End Sub
+
+
+Option Explicit
+
+Sub CreateFormattedComment()
+Dim SelRow As Long
+Dim CommText As String
+With Sheet1
+        SelRow = .Range("B4").Value 'Selected Row
+        CommText = .Range("D" & SelRow).Value & vbCrLf & _
+            "Type: " & .Range("E" & SelRow).Value & vbCrLf & _
+            "Phone: " & Application.WorksheetFunction.Text(.Range("F" & SelRow).Value, "(###) ###-####") & vbCrLf & _
+            "Email: " & .Range("G" & SelRow).Value & vbCrLf & _
+            "Address: " & .Range("H" & SelRow).Value & vbCrLf & _
+            "              " & .Range("I" & SelRow).Value & ", " & _
+            .Range("J" & SelRow).Value & " " & .Range("K" & SelRow).Value 'Address
+        .Range("G" & SelRow).ClearComments
+        .Range("G" & SelRow).AddComment
+        With .Range("G" & SelRow).Comment
+            .Text Text:=CommText
+            .Shape.Width = 230
+            .Shape.Height = 110
+            .Shape.AutoShapeType = msoShapeRoundedRectangle
+           .Shape.Fill.ForeColor.RGB = RGB(58, 82, 184)
+            .Shape.Fill.OneColorGradient msoGradientDiagonalUp, 1, 0.23
+            .Shape.TextFrame.Characters.Font.Name = "Tahoma"
+            .Shape.TextFrame.Characters.Font.Bold = False
+            .Shape.TextFrame.Characters.Font.Size = 11
+            .Shape.TextFrame.Characters.Font.ColorIndex = 2
+            .Shape.Fill.Visible = msoTrue
+            .Visible = True
+        End With
+End With
+End Sub
+
+
+Sub ShowPictureAsComment()
+ Dim SelRow As Long
+ Dim PicFile As String
+ With Sheet1
+    SelRow = .Range("B4").Value 'Selected Row
+    If .Range("M" & SelRow).Value = Empty Then Exit Sub 'Pic File Path required
+    PicFile = .Range("M" & SelRow).Value 'Picture File Path
+    .Range("D" & SelRow).ClearComments
+    .Range("D" & SelRow).AddComment
+    With .Range("D" & SelRow).Comment
+        .Text Text:=" "
+        .Shape.Fill.UserPicture (PicFile)
+        .Shape.ScaleHeight 2, msoFalse, msoScaleFromTopLeft
+        .Shape.ScaleWidth 1, msoFalse, msoScaleFromTopLeft
+        .Visible = True
+    End With
+ End With
+End Sub
+
+
+```
