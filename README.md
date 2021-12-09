@@ -54,7 +54,7 @@ CapexTarget.objects.filter(company_code__in=ProjectsNtpc.objects.values('project
 6. ProjectsNtpc.objects.values_list('projectname','fuel').filter(fuel__in= ['Coal','Hydro']).filter
 7. (projectname__in=Milestones.objects.values_list('project').filter(milestone='TOC').exclude(achieved='A'))
 ```
-### Working with Pandas
+## Working with Pandas
 ### Install Packaghes
 ```python
 pip install pandas
@@ -150,17 +150,17 @@ output = styleobj.set_table_attributes('class="table table-stripped table-border
 https://stackoverflow.com/questions/49881751/multiindex-pivot-table-with-subtotals-in-pandas
 
 
-### ASP .NET Page LifeCycle
+## ASP .NET Page LifeCycle
 
 https://docs.microsoft.com/en-us/previous-versions/dotnet/articles/ms972976(v=msdn.10)?redirectedfrom=MSDN
 
 
-### Power BI Table S.No
+## Power BI Table S.No
 ```
 sno=calculate( countrows(table),filter(allselected(table),table[column] <= max(table[column])))
 ```
 
-### Manage user RDP sessions on Windows Server 2012
+## Manage user RDP sessions on Windows Server 2012
 ```shell
 PS C:\Windows\system32> quser
  USERNAME              SESSIONNAME        ID  STATE   IDLE TIME  LOGON TIME
@@ -168,7 +168,7 @@ PS C:\Windows\system32> quser
 PS C:\Windows\system32> logoff <sessionID>
 ```
 
-### Datatables.net excel export hyperlink rendering for Safety Register Dashboard
+## Datatables.net excel export hyperlink rendering for Safety Register Dashboard
 
 https://stackoverflow.com/questions/40243616/jquery-datatables-export-to-excelhtml5-hyperlink-issue
 https://datatables.net/extensions/buttons/examples/html5/excelTextBold.html
@@ -192,7 +192,7 @@ buttons: [ {
 
 ```
 
-### Marked Down Language Code Blocks
+## Marked Down Language Code Blocks
 
 ###### Basic Formatting
 
@@ -203,7 +203,7 @@ https://docs.github.com/en/github/writing-on-github/getting-started-with-writing
 https://rdmd.readme.io/docs/code-blocks
 
 
-### Excel Sheet Custom Pop-up
+## Excel Sheet Custom Pop-up
 
 https://www.youtube.com/watch?v=yFqJCCEsi_Y
 
