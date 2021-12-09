@@ -207,7 +207,7 @@ https://rdmd.readme.io/docs/code-blocks
 
 https://www.youtube.com/watch?v=yFqJCCEsi_Y
 
-```asp
+```vbscript
 Option Explicit
 
 Private Sub Worksheet_SelectionChange(ByVal Target As Range)
