@@ -54,7 +54,7 @@ CapexTarget.objects.filter(company_code__in=ProjectsNtpc.objects.values('project
 6. ProjectsNtpc.objects.values_list('projectname','fuel').filter(fuel__in= ['Coal','Hydro']).filter
 7. (projectname__in=Milestones.objects.values_list('project').filter(milestone='TOC').exclude(achieved='A'))
 ```
-## Working with Pandas
+### Working with Pandas
 ### Install Packaghes
 ```python
 pip install pandas
