@@ -282,4 +282,5 @@ End Sub
 3. Insert MicroSD Card in Laptop and run Respberry Pi Imager.
 4. Imager has a list of supported Raspberry OS. Choose the last option for other OS, and browse for downloaded FullPageOS
 5. Select MicroSD Card and burn it.
+6. Configure static IP (If required) https://www.makeuseof.com/raspberry-pi-set-static-ip/
 
