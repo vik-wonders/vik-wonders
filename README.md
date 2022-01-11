@@ -278,5 +278,8 @@ End Sub
 
 ## Configuring Respberry Pi 4
 1. Download Respberry Pi Imager from https://www.raspberrypi.com/software/
-2. 
+2. Download Full Page OS from http://unofficialpi.org/Distros/FullPageOS/
+3. Insert MicroSD Card in Laptop and run Respberry Pi Imager.
+4. Imager has a list of supported Raspberry OS. Choose the last option for other OS, and browse for downloaded FullPageOS
+5. Select MicroSD Card and burn it.
 
