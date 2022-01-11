@@ -275,3 +275,8 @@ End With
 End Sub
 
 ```
+
+## Configuring Respberry Pi 4
+1. Download Respberry Pi Imager from https://www.raspberrypi.com/software/
+2. 
+
