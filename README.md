@@ -284,3 +284,7 @@ End Sub
 5. Select MicroSD Card and burn it.
 6. Configure static IP (If required) https://www.makeuseof.com/raspberry-pi-set-static-ip/
 
+## Mount One Drive in Ubuntu
+
+Follow the step at https://itsfoss.com/onedriver/
+I have succesfully configured on my Ubuntu 21.10
