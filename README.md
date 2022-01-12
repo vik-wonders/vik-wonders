@@ -288,3 +288,13 @@ End Sub
 
 Follow the step at https://itsfoss.com/onedriver/
 I have succesfully configured on my Ubuntu 21.10
+
+## Install SAP GUI in Ubuntu 21.10
+
+1. Download SAP GUI for JAVA from https://developers.sap.com/trials-downloads.html
+2. Unrar the downloaded file (May require to install unrar via sudo apt-get install unrar)
+3. install OpenJRE with sudo apt install default-jre
+4. Install the C Shell and other dependencies with sudo apt-get install gcc perl csh libaio1 libc6 libstdc++6
+5. Open SAP GUI extracted folder and choose the required version then run command 
+6. java -jar PlatinGUI-Linux-7.50rev12.jar install
+7. Its done!
