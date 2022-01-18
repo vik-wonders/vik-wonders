@@ -315,6 +315,7 @@ Now Once Connected to Internet, may run some updates
 4. For the reboot prompt, select Yes
 
 Download Real VNC Client from https://www.realvnc.com/en/connect/download/viewer/
+
 For Detailed instructions https://desertbot.io/blog/headless-raspberry-pi-4-remote-desktop-vnc-setup
 
 
