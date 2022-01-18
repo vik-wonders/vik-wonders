@@ -284,6 +284,51 @@ End Sub
 5. Select MicroSD Card and burn it.
 6. Configure static IP (If required) https://www.makeuseof.com/raspberry-pi-set-static-ip/
 
+## Setup WiFi on Raspberry Pi 4
+
+1. Insert MicroSD Card in Laptop and Open /boot/fullpageos-wpa-supplicant.txt in a text editor.
+2. Locate the WPA/WPA2 secured section in the text file.
+3. Uncomment network={ to } (4 lines) by removing the # signs from the beginning of each line.
+4. network={
+    ssid="NETWORK-NAME"
+    psk="NETWORK-PASSWORD"
+}
+5. Replace NETWORK-NAME with your Wi-Fi network id (inside double quotes)
+6. Replace NETWORK-PASSWORD with the Wi-Fi password (inside double quotes)
+
+For Detailed Instructions visit https://www.otot.tv/fullpageos-setup-instructions/
+
+Now Once Connected to Internet, may run some updates
+1. sudo apt-get update
+2. sudo apt-get upgrade
+3. sudo apt dist-upgrade
+
+
+## Configure VNC on Headless Raspberry Pi 4
+
+1. sudo raspi-config
+2. Select Interfacing Options
+	Select VNC
+	For the prompt to enable VNC, select Yes (Y)
+	For the confirmation, select Ok
+3. Select Finish
+4. For the reboot prompt, select Yes
+
+Download Real VNC Client from https://www.realvnc.com/en/connect/download/viewer/
+For Detailed instructions https://desertbot.io/blog/headless-raspberry-pi-4-remote-desktop-vnc-setup
+
+
+## Change default display resolution
+
+1. sudo raspi-config
+2. Select Display
+   on older versions this was under Advanced Options
+3. Select Resolution
+4. Select anything but the default (example: 1024x768)
+5. Select Ok
+6. Select Finish
+7. For the reboot prompt, select Yes
+
 ## Mount One Drive in Ubuntu
 
 Follow the step at https://itsfoss.com/onedriver/
