@@ -306,6 +306,11 @@ Now Once Connected to Internet, may run some updates
 
 ## Configure VNC on Headless Raspberry Pi 4
 
+Now Once Connected to Internet, may run some updates
+1. sudo apt-get update
+2. sudo apt-get upgrade
+3. sudo apt dist-upgrade
+
 1. sudo raspi-config
 2. Select Interfacing Options
 	Select VNC
