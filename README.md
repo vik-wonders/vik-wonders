@@ -337,8 +337,9 @@ For Detailed instructions https://desertbot.io/blog/headless-raspberry-pi-4-remo
 
 ## Mount One Drive in Ubuntu
 
-Follow the step at https://itsfoss.com/onedriver/
-I have succesfully configured on my Ubuntu 21.10
+1. Follow the step at https://itsfoss.com/onedriver/ . I have succesfully configured on my Ubuntu 21.10
+2. For Ubuntu 21.04, you may use it by downloading from https://launchpad.net/~jstaf/+archive/ubuntu/onedriver/+packages (direct download)
+3. In downloaded file, right Click-> Properties->Permission : Check Allow Executing File As Program
 
 ## Install SAP GUI in Ubuntu 21.10
 
