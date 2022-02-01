@@ -349,3 +349,10 @@ I have succesfully configured on my Ubuntu 21.10
 5. Open SAP GUI extracted folder and choose the required version then run command 
 6. java -jar PlatinGUI-Linux-7.50rev12.jar install
 7. Its done!
+
+
+## Install ZSCALAR VPN in Ubuntu 21.10
+
+1. Download Zscalar client from https://d32a6ru7mhaq0c.cloudfront.net/Zscaler-linux-1.1.0.24-installer.run
+2. Shared by Kuldeep Singh Sir vide email Dated 10.01.2022
+3. In downloaded file, right Click-> Properties->Permission : Check Allow Executing File As Program
