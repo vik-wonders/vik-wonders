@@ -342,13 +342,21 @@ I have succesfully configured on my Ubuntu 21.10
 
 ## Install SAP GUI in Ubuntu 21.10
 
-1. Download SAP GUI for JAVA from https://developers.sap.com/trials-downloads.html
-2. Unrar the downloaded file (May require to install unrar via sudo apt-get install unrar)
-3. install OpenJRE with sudo apt install default-jre
-4. Install the C Shell and other dependencies with sudo apt-get install gcc perl csh libaio1 libc6 libstdc++6
-5. Open SAP GUI extracted folder and choose the required version then run command 
-6. java -jar PlatinGUI-Linux-7.50rev12.jar install
-7. Its done!
+1. Download [ SAP GUI for JAVA ] from https://developers.sap.com/trials-downloads.html
+2. Direct Link to download is https://www.sap.com/registration/trial.f47300f6-63b8-4f22-b189-dbadd3c903d6.html?id=0050000000231062021&external-site=aHR0cHM6Ly9kZXZlbG9wZXJzLnNhcC5jb20vdHJpYWxzLWRvd25sb2Fkcy5odG1s
+4. Credentials are : vsverma@ntpc.co.in & Winter@2021
+5. Unrar the downloaded file (May require to install unrar via sudo apt-get install unrar)
+6. install OpenJRE with sudo apt install default-jre
+7. Install the C Shell and other dependencies with sudo apt-get install gcc perl csh libaio1 libc6 libstdc++6
+8. Open SAP GUI extracted folder and choose the required version then run command 
+9. java -jar PlatinGUI-Linux-7.50rev12.jar install
+10. Installation done!
+11. Open https://myapps.microsoft.com/
+12. Click on SAP ERP Production
+13. Rename downloaded launch.html to launch.sap
+14. open SAP application -> File -> Open Connection Data Document->browse for launch.sap
+15. Select MAx trusted option in next popup
+16. SAP should open now 👍👍
 
 
 ## Install ZSCALAR VPN in Ubuntu 21.10
