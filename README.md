@@ -194,13 +194,16 @@ buttons: [ {
 
 ## Django template Language
 
+
+### Basic Guide
+https://docs.djangoproject.com/en/4.0/ref/templates/builtins/
+
 ### Icon set
 http://icon-sets.iconify.design/logos/google-photos/
 ```
 <script src="https://code.iconify.design/2/2.1.2/iconify.min.js"></script>
 <span class="iconify" data-icon="logos:google-photos" style="color: red;" data-width="30"></span>
 ```
-
 
 
 ## Marked Down Language Code Blocks
