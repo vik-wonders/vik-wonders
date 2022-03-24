@@ -379,3 +379,14 @@ For Detailed instructions https://desertbot.io/blog/headless-raspberry-pi-4-remo
 1. Download Zscalar client from https://d32a6ru7mhaq0c.cloudfront.net/Zscaler-linux-1.1.0.24-installer.run
 2. Shared by Kuldeep Singh Sir vide email Dated 10.01.2022
 3. In downloaded file, right Click-> Properties->Permission : Check Allow Executing File As Program
+
+## HTML Table Sticky Header CSS
+```html
+.tableFixHead          { overflow: auto; height: 100px; }
+.tableFixHead thead th { position: sticky; top: 0; z-index: 1; }
+
+/* Just common table stuff. Really. */
+table  { border-collapse: collapse; width: 100%; }
+th, td { padding: 8px 16px; }
+th     { background:#eee; }
+```
