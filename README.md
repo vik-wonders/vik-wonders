@@ -392,8 +392,14 @@ th     { background:#eee; }
 ```
 
 ## Project Web/Online reporting in Power BI
+### Project for Web
 1. Help Document : https://support.microsoft.com/en-us/office/use-power-bi-desktop-to-connect-with-your-project-data-df4ccca1-68e9-418c-9d0f-022ac05249a2
 2. Project Dashboard Template for Power BI : https://github.com/OfficeDev/Project-Power-BI-Templates
 3. NTPC Dynamic 365 Dataverse URL : https://org009d3eb7.crm8.dynamics.com/ 
 4. NTPC Environment Name : org009d3eb7
 5. NTPC region : crm8
+
+### Project Online
+1. Help Document : https://support.microsoft.com/en-us/office/use-power-bi-desktop-to-connect-with-your-project-data-df4ccca1-68e9-418c-9d0f-022ac05249a2
+2. Project Dashboard Template for Power BI : https://github.com/OfficeDev/Project-Power-BI-Templates
+3. PWA site address URL : https://ntpccoin.sharepoint.com/sites/pwa
