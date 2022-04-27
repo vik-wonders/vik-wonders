@@ -411,3 +411,6 @@ By default, Project Sites are no longer automatically created on first publish:
 3. Connected SharePoint Sites
 4. click on the Settings button.
 5. Create Site
+
+## Proxy Set-up in Debian through CLI
+https://computingforgeeks.com/how-to-set-system-proxy-on-debian-linux/
