@@ -414,3 +414,10 @@ By default, Project Sites are no longer automatically created on first publish:
 
 ## Proxy Set-up in Debian through CLI
 https://computingforgeeks.com/how-to-set-system-proxy-on-debian-linux/
+
+## DPR Table Details
+1. Progress_template : Master list of all activities
+2. ProgressDetails : Activity progress updates by user
+3. ProgressMaster : Project wise activity meta data like complition date, Target etc
+
+Activity ID (act_id) is important and key field
