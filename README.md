@@ -349,6 +349,10 @@ For Detailed instructions https://desertbot.io/blog/headless-raspberry-pi-4-remo
 6. Select Finish
 7. For the reboot prompt, select Yes
 
+## Install ZOOM on raspberry Pi 4 
+https://pimylifeup.com/raspberry-pi-zoom/
+
+
 ## Mount One Drive in Ubuntu
 
 1. Follow the step at https://itsfoss.com/onedriver/ . I have succesfully configured on my Ubuntu 21.10
