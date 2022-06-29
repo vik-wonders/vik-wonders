@@ -429,3 +429,9 @@ Activity ID (act_id) is important and key field
 ## PM server Migration SCOPE-DC
 1. https://www.hostitsmart.com/blog/how-to-migrate-a-website-from-one-server-to-another/
 2. https://computingforgeeks.com/how-to-set-system-proxy-on-debian-linux/
+
+## IP CAMERA RTSP stream URL finder
+
+https://www.ispyconnect.com/camera/mega-pixel
+
+homepage-> more-> CameraDatabase
