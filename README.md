@@ -437,20 +437,27 @@ https://www.ispyconnect.com/camera/mega-pixel
 homepage-> more-> CameraDatabase
 
 ## Issue Tracker
-
+```
 1. do [su -] at begining to get root authorization. this is required to edit files
 2. grep -Ril "text-to-find-here" /var/www/itracker
 
-
-1. /var/www/itracker/modules/issues/hooks -> class.php
- (This contains definition of functions)
- 
-2. /var/www/itracker/modules/issues/hooks -> func.php
- (this contains add_new_func() which generates query to add issue. Here we modified query which generates issueid from database)
- 
-2. /var/www/itracker/modules/groups/hooks/func.php
-  ( This file has a function which provides package selection furing issue registration)
 3. /var/www/itracker/themes/default/tpl/issues/new.tpl
   (HTML of issue registration page)
 4. /var/www/itracker/modules/issues/new.issues.php
   (parsing of fields of issue reg form and forward them to add_new_issue() for query creation and futher process)
+  
+5. /var/www/itracker/modules/issues/hooks -> func.php
+ (this contains add_new_func() which generates query to add issue. Here we modified query which generates issueid from database)
+
+6. /var/www/itracker/modules/groups/hooks/func.php
+  ( This file has a function which provides package selection furing issue registration)
+
+7. /var/www/itracker/modules/issues/hooks -> class.php
+ (This contains definition of functions)
+8. .tpl is HTML file and .php is code file
+```
+
+
+ 
+
+
