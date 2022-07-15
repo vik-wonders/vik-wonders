@@ -435,3 +435,18 @@ Activity ID (act_id) is important and key field
 https://www.ispyconnect.com/camera/mega-pixel
 
 homepage-> more-> CameraDatabase
+
+## Issue Tracker
+
+do [su -] at begining to get root authorization. this is required to edit files
+grep -Ril "text-to-find-here" /var/www/itracker
+
+
+1. /var/www/itracker/modules/issues/hooks -> class.php
+ (This contains definition of functions)
+2. /var/www/itracker/modules/groups/hooks/func.php
+  ( This file has a function which provides package selection furing issue registration)
+3. /var/www/itracker/themes/default/tpl/issues/new.tpl
+  (HTML of issue registration page)
+4. /var/www/itracker/modules/issues/new.issues.php
+  (parsing of fields of issue reg form and forward them to add_new_issue() for query creation and futher process)
