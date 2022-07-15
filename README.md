@@ -438,7 +438,7 @@ homepage-> more-> CameraDatabase
 
 ## Issue Tracker
 ```
-1. do [su -] at begining to get root authorization. this is required to edit files
+1. do [su -] pmc:admin&42 at begining to get root authorization. this is required to edit files
 2. grep -Ril "text-to-find-here" /var/www/itracker
 
 3. /var/www/itracker/themes/default/tpl/issues/new.tpl
