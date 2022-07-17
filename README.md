@@ -457,7 +457,9 @@ homepage-> more-> CameraDatabase
 8. .tpl is HTML file and .php is code file
 ```
 
-
- 
+## VIM editor
+:set number
+:set syntax=php
+:syntax on
 
 
