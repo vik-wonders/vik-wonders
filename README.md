@@ -458,8 +458,8 @@ homepage-> more-> CameraDatabase
 ```
 
 ## VIM editor
-:set number
-:set syntax=php
-:syntax on
+1. :set number
+2. :set syntax=php
+3. :syntax on
 
 
