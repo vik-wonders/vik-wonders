@@ -461,5 +461,6 @@ homepage-> more-> CameraDatabase
 1. :set number
 2. :set syntax=php
 3. :syntax on
+4. :set autoindent
 
 
