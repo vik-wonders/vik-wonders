@@ -463,4 +463,10 @@ homepage-> more-> CameraDatabase
 3. :syntax on
 4. :set autoindent
 
-
+## RDP Session licensing server error
+1. login to Server using Anydesk (446 365 040) from PMC user
+2. open regedit and navigate to Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\RCM
+3. Here you need to delete or rename [GracePeriod] registry entry
+4. Right Click GracePeriod -> Permissions -> Advanced -> Click on change link at top infront of owner -> Advanced -> Find Now -> Administrators
+5. Set Access permission to Full Control -> OK
+6. Reboot Server
