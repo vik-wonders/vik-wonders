@@ -456,7 +456,7 @@ homepage-> more-> CameraDatabase
  (This contains definition of functions)
 8. .tpl is HTML file and .php is code file
 
-9. Mind Map link : https://www.mindmeister.com/map/2357743095
+9. Mind Map link : https://www.mindmeister.com/map/2357743095 (Login with Google )
 
 ```
 
