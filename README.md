@@ -469,4 +469,5 @@ homepage-> more-> CameraDatabase
 3. Here you need to delete or rename [GracePeriod] registry entry
 4. Right Click GracePeriod -> Permissions -> Advanced -> Click on change link at top infront of owner -> Advanced -> Find Now -> Administrators
 5. Set Access permission to Full Control -> OK
-6. Reboot Server
+6. OPen Services.msc and restart *Remote Desktop* matching services
+7. Or Reboot Server
