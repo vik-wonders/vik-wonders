@@ -458,6 +458,8 @@ homepage-> more-> CameraDatabase
 
 9. Mind Map link : https://www.mindmeister.com/map/2357743095 (Login with Google )
 
+10. product is unit no. 61 is U#1 and so on in progression. 80 is common
+11. /var/www/mis/common.php is custom commonly used functions
 ```
 
 ## VIM editor
