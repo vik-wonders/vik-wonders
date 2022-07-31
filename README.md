@@ -461,6 +461,25 @@ homepage-> more-> CameraDatabase
 10. product is unit no. 61 is U#1 and so on in progression. 80 is common
 11. /var/www/mis/common.php is custom commonly used functions
 ```
+### Postfix mail troubleshooting
+```
+1. edit this file and add following line to it /etc/postfix/smtp_sasl_password_map
+[smtp server]:[port] [mail account]:[mail account password]
+10.0.14.112:25  :Ntpc@2021
+
+Following is the SMTP configuration shared to US by EMail Group
+                    credentials.UserName = ""
+                    credentials.Password = "Ntpc@2021"
+                    smtp.UseDefaultCredentials = False
+                    smtp.Credentials = credentials
+                    smtp.Port = 25
+                    smtp.EnableSsl = False
+2. Webmin (http://10.0.236.42:10000/)-> Postfix mail Server -> General Options
+What domain to use in outbound mail : ntpc.co.in
+Send outgoing mail via host : 10.0.14.112
+Address that receive bccof each message : vsverma@ntpc.co.in
+
+```
 
 ## VIM editor
 1. :set number
