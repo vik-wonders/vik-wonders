@@ -440,6 +440,9 @@ homepage-> more-> CameraDatabase
 ```
 1. do [su -] pmc:admin&42 at begining to get root authorization. this is required to edit files
 2. grep -Ril "text-to-find-here" /var/www/itracker
+3. http://10.0.236.42/admin/cc.php
+4. http://10.0.236.42:10000
+5. curl http://www.google.com
 
 3. /var/www/itracker/themes/default/tpl/issues/new.tpl
   (HTML of issue registration page)
