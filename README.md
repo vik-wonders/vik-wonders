@@ -490,6 +490,9 @@ Address that receive bccof each message : vsverma@ntpc.co.in
 
 3. echo "Test Email message body" | mail -s "Hello from POstfix 12.09.2022 05" vsverma@ntpc.co.in
 4. echo "Subject: Hello from Sendmail on 12.09.2022 05" |sendmail vsverma@ntpc.co.in
+5. PHP mail() function gives -t not found error due to PHP version change from 7.3 to 7.4
+6. In /etc/php/7.4/apache2/php.ini -> [mail function] section : set sendmail path as below :-
+sendmail_path=/usr/sbin/sendmail -t -i
 ```
 
 ## VIM editor
