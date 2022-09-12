@@ -488,6 +488,8 @@ What domain to use in outbound mail : ntpc.co.in
 Send outgoing mail via host : 10.0.14.112
 Address that receive bccof each message : vsverma@ntpc.co.in
 
+3. echo "Test Email message body" | mail -s "Hello from POstfix 12.09.2022 05" vsverma@ntpc.co.in
+4. echo "Subject: Hello from Sendmail on 12.09.2022 05" |sendmail vsverma@ntpc.co.in
 ```
 
 ## VIM editor
