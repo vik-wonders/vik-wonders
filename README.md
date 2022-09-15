@@ -3,14 +3,16 @@
 pip install django-tables2
 ```
 
+## Open Shell
+```bash
+D:\webapp\OneLedger>pipenv shell [ This is required if virtual environment is set else below command will work]
+D:\webapp\OneLedger>python manage.py shell
+```
+
 ## Run Local Server
 ```bash
 D:\webapp\OneLedger>python manage.py runserver
 D:\webapp\OneLedger>python manage.py runserver 0.0.0.0:8000
-```
-## Open Shell
-```bash
-D:\webapp\OneLedger>python manage.py shell
 ```
 
 ## Inspect DB
