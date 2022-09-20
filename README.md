@@ -443,6 +443,8 @@ https://www.ispyconnect.com/camera/mega-pixel
 
 homepage-> more-> CameraDatabase
 
+1. IP Cam Image Capture URL -> http://10.4.8.68/ppnmmobilesite/ipcamera.aspx?mobile=9650990882&timer=1
+
 ## Issue Tracker
 ```
 1. do [su -] pmc:admin&42 at begining to get root authorization. this is required to edit files
