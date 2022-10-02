@@ -513,3 +513,8 @@ sendmail_path=/usr/sbin/sendmail -t -i
 5. Set Access permission to Full Control -> OK
 6. OPen Services.msc and restart *Remote Desktop* matching services
 7. Or Reboot Server
+
+## PRIMS Crystal Report Configuration in New Server
+1. https://www.tektutorialshub.com/crystal-reports/how-to-download-and-install-crystal-report-runtime/
+2. I installed Version 13.0.18 for both x86 and x64
+3. This resolved log4net assembly dependency missing error
