@@ -518,3 +518,7 @@ sendmail_path=/usr/sbin/sendmail -t -i
 1. https://www.tektutorialshub.com/crystal-reports/how-to-download-and-install-crystal-report-runtime/
 2. I installed Version 13.0.18 for both x86 and x64
 3. This resolved log4net assembly dependency missing error
+
+## Particles
+1. https://www.npmjs.com/package/jquery-particles
+2. https://www.section.io/engineering-education/javascript-particles-effect-with-tsparticles/
