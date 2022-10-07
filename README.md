@@ -522,3 +522,6 @@ sendmail_path=/usr/sbin/sendmail -t -i
 ## Particles
 1. https://www.npmjs.com/package/jquery-particles
 2. https://www.section.io/engineering-education/javascript-particles-effect-with-tsparticles/
+
+## PM Website Audit
+1. https://trustzone.com/knowledge-base/how-to-disable-tls-1-0-and-tls-1-1-on-windows-server-2008-2016/
