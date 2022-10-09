@@ -2,23 +2,21 @@
 ### Install Python, pipenv and VS Code
 0. Tutorial Video @ https://www.youtube.com/watch?v=rHux0gMZ3Eg
 1. Download latest python from www.python.org/downloads/ and Install it. Do select add to PATH option
-```
-3. python --version (To check version of installed python)
-4. pip --version (To check version of installed pip)
-5. pip install pipenv (To install python project dependency management tool)
-```
-7. Install VS Code from code.visualstudio.com
-8. vscode . (this opens VS code with cirrent directory)
-9. In VS Code serach for python in extensions and install python intellisens
+2. python --version (To check version of installed python)
+3. ``` pip --version (To check version of installed pip) ```
+4. ``` pip install pipenv (To install python project dependency management tool) ```
+5. Install VS Code from code.visualstudio.com
+6. ``` vscode . (this opens VS code with cirrent directory) ```
+7. In VS Code serach for python in extensions and install python intellisens
 
 ### Creating Django project
 1. Create a folder for django project
-2. pipenv install django (pipenv install creates a virtual envirinment for current folder. In this case a virtual environtment will be created and django will be installed in virtual environment. pip
+2. ``` pipenv install django (pipenv install creates a virtual envirinment for current folder. In this case a virtual environtment will be created and django will be installed in virtual environment. ```
 3. By default location of virtual envirnment is C:\Users\<username>\.virtualenvs\<virtual environment directory>
 4. [export PIPENV_VENV_IN_PROJECT=1] Exporting this variable sets current folder as the location of virtual directory for current project [<project/.venv>]
 5. ``` pipenv --venv (This gives the path to the virtual environment folder of current project ```
-6. pipenv shell (To activate the current virtual environment)
-7. django-admin startproject <Project Name> (This will create a new project with specified name. With the same name a default app will also be created inside project)
+6. ``` pipenv shell (To activate the current virtual environment) ```
+7. ``` django-admin startproject <Project Name> ``` (This will create a new project with specified name. With the same name a default app will also be created inside project)
 8. manage.py is a wrapper around django-admin. [ Manage.py=django-admin + current project setting info ]. Therefore for management of project manage.py to be used in place of django-admin
 9. python manage.py runserver <port NO | 8000> (THis will run the server on specified port or on default port 8000. http://127.0.0.1:8000/)
 
