@@ -16,7 +16,7 @@
 2. pipenv install django (pipenv install creates a virtual envirinment for current folder. In this case a virtual environtment will be created and django will be installed in virtual environment. pip
 3. By default location of virtual envirnment is C:\Users\<username>\.virtualenvs\<virtual environment directory>
 4. [export PIPENV_VENV_IN_PROJECT=1] Exporting this variable sets current folder as the location of virtual directory for current project [<project/.venv>]
-5. pipenv --venv (This gives the path to the virtual environment folder of current project
+5. ``` pipenv --venv (This gives the path to the virtual environment folder of current project ```
 6. pipenv shell (To activate the current virtual environment)
 7. django-admin startproject <Project Name> (This will create a new project with specified name. With the same name a default app will also be created inside project)
 8. manage.py is a wrapper around django-admin. [ Manage.py=django-admin + current project setting info ]. Therefore for management of project manage.py to be used in place of django-admin
