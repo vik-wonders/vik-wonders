@@ -105,7 +105,7 @@ https://youtu.be/rHux0gMZ3Eg?t=2184
 ### Using Django debug Toolbar
 https://youtu.be/rHux0gMZ3Eg?t=2653
 All steps here ar https://django-debug-toolbar.readthedocs.io/en/latest/installation.html
-1. pipenv install django-debug-toolbar
+1. ``` pipenv install django-debug-toolbar ```
 2. Ensure INSTALLED_APPS setting has staticfiles entry in project settings.py file
 ```python
 INSTALLED_APPS = [
