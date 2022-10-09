@@ -31,7 +31,14 @@
 7. Open Powershell as admin and run  [set-executionpolicy remotesigned]. This will allow PowerShell to run all local scripts and all signed remote scripts.
 8. Now can run inside terminal [ ``` python manage.py runserver ``` ]. It will work.
 
-	
+### Django Project Structure
+1. settings.py has project wide settings
+2. Run Terminal and run ``` python manage.py startapp <App Name> ``` This will add an app to django project
+3. Each Django APP has same structure with folowing parts
+	1. admin.py -> Configure admin interface for this app
+	2. apps.py -> configuration for this app
+	3. models.py -> Database models for this app
+	4. views.py -> Request handler for this app.
 	
 ## Install Packages in Django
 ```bash
