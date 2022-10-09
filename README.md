@@ -2,34 +2,34 @@
 ### Install Python, pipenv and VS Code
 0. Tutorial Video @ https://www.youtube.com/watch?v=rHux0gMZ3Eg
 1. Download latest python from www.python.org/downloads/ and Install it. Do select add to PATH option
-2. python --version (To check version of installed python)
-3. ``` pip --version (To check version of installed pip) ```
-4. ``` pip install pipenv (To install python project dependency management tool) ```
+2. ``` python --version ``` (To check version of installed python)
+3. ``` pip --version ``` (To check version of installed pip)
+4. ``` pip install pipenv ``` (To install python project dependency management tool)
 5. Install VS Code from code.visualstudio.com
-6. ``` vscode . (this opens VS code with cirrent directory) ```
+6. ``` vscode . ``` (this opens VS code with cirrent directory)
 7. In VS Code serach for python in extensions and install python intellisens
 
 ### Creating Django project
 1. Create a folder for django project
-2. ``` pipenv install django (pipenv install creates a virtual envirinment for current folder. In this case a virtual environtment will be created and django will be installed in virtual environment. ```
+2. ``` pipenv install django ``` (pipenv install creates a virtual envirinment for current folder. In this case a virtual environtment will be created and django will be installed in virtual environment.
 3. By default location of virtual envirnment is C:\Users\<username>\.virtualenvs\<virtual environment directory>
 4. [export PIPENV_VENV_IN_PROJECT=1] Exporting this variable sets current folder as the location of virtual directory for current project [<project/.venv>]
-5. ``` pipenv --venv (This gives the path to the virtual environment folder of current project ```
-6. ``` pipenv shell (To activate the current virtual environment) ```
+5. ``` pipenv --venv ``` (This gives the path to the virtual environment folder of current project
+6. ``` pipenv shell ``` (To activate the current virtual environment)
 7. ``` django-admin startproject <Project Name> ``` (This will create a new project with specified name. With the same name a default app will also be created inside project)
 8. manage.py is a wrapper around django-admin. [ Manage.py=django-admin + current project setting info ]. Therefore for management of project manage.py to be used in place of django-admin
-9. python manage.py runserver <port NO | 8000> (THis will run the server on specified port or on default port 8000. http://127.0.0.1:8000/)
+9. ``` python manage.py runserver <port NO | 8000> ``` (This will run the server on specified port or on default port 8000. http://127.0.0.1:8000/)
 
 ### Integrated VS code Terminal
 1. Here we need to configure the virtual environment python interpretor in place of golbal python interpretor
 2. Go to <Python Project>
-2. code .
+2. ``` code . ```
 3. View -> Command Pallette -> Search [python interpretor]-> Enter Path
-4. Here enter virtual environment path from command  [pipenv --venv] and append /Scripts/python/
+4. Here enter virtual environment path from command  ``` pipenv --venv ``` and append /Scripts/python/
 5. Now open terminal View-> terminal (VS Code autometically activates virtual environment in terminal)
 6. If there is an error while opening terminal regarding failure to run Activate script. Then
 7. Open Powershell as admin and run  [set-executionpolicy remotesigned]. This will allow PowerShell to run all local scripts and all signed remote scripts.
-8. Now can run inside terminal [python manage.py runserver]. It will work.
+8. Now can run inside terminal [ ``` python manage.py runserver ``` ]. It will work.
 
 	
 	
