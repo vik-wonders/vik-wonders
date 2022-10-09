@@ -139,6 +139,7 @@ INSTALLED_APPS = [
 5. Entry in Project urls.py
 ```python
 from django.urls import include, path
+import django_toolbar
 
 urlpatterns = [
     # ...
