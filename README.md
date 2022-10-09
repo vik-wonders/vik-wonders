@@ -69,8 +69,10 @@ urlpatterns = [
     path('hello/',views.say_hello)
 ]
 ```
-	1. Here 2nd part of URL is matched ``` path('hello/',views.say_hello) ```
-	2. function say_hello() is called from HelloApp views.py
+
+1. Here 2nd part of URL is matched ``` path('hello/',views.say_hello) ```
+2. function say_hello() is called from HelloApp views.py
+
 #### HelloApp Views.py
 ```python
 from django.shortcuts import render
@@ -83,7 +85,8 @@ def say_hello(request):
     #return HttpResponse('Helo Dear Friends')
     return render(request,'hello.html',{'name':'Vikram'})
 ```
-	1. Here either a response text is returned by ``` return HttpResponse('Helo Dear Friends') ``` or Template is called and response is returned by ``` return render(request,'hello.html',{'name':'Vikram'}) ```
+
+1. Here either a response text is returned by ``` return HttpResponse('Helo Dear Friends') ``` or Template is called and response is returned by ``` return render(request,'hello.html',{'name':'Vikram'}) ```
 
 #### HelloApp hello.html in Templates folder
 ```html
