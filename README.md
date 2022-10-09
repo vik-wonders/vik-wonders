@@ -34,11 +34,13 @@
 ### Django Project Structure
 1. settings.py has project wide settings
 2. Run Terminal and run ``` python manage.py startapp <App Name> ``` This will add an app to django project
+3. register this app under INSTALLED_APPS of settings.py
 3. Each Django APP has same structure with folowing parts
 	1. admin.py -> Configure admin interface for this app
 	2. apps.py -> configuration for this app
 	3. models.py -> Database models for this app
-	4. views.py -> Request handler for this app.
+	4. views.py -> Request handler for this app (takes request and returns response)
+	5. urls.py -> url pattern to funtion mapping
 	
 ## Install Packages in Django
 ```bash
