@@ -55,6 +55,45 @@ urlpatterns = [
     path('__debug__/', include('debug_toolbar.urls')),
 ]
 ```
+	1. This is like a router for url patterns from main site to apps.
+	2. When url is ``` http://127.0.0.1:8000/HelloApp/hello/ ``` then it matches ``` path('HelloApp/', include('HelloApp.urls')), ``` and forwards control to urls.py in HelloApp
+
+2. HelloApp urls.py
+```python
+from django.urls import path
+from . import views
+
+#URLConf
+urlpatterns = [
+    path('hello/',views.say_hello)
+]
+```
+	1. Here 2nd part of URL is matched ``` path('hello/',views.say_hello) ```
+	2. function say_hello() is called from HelloApp views.py
+3. HelloApp Views.py
+```python
+from django.shortcuts import render
+from django.http import HttpResponse
+
+# Create your views here.
+def say_hello(request):
+    x=1
+    y=2
+    #return HttpResponse('Helo Dear Friends')
+    return render(request,'hello.html',{'name':'Vikram'})
+```
+	1. Here either a response text is returned by ``` return HttpResponse('Helo Dear Friends') ``` or Template is called and response is returned by ``` return render(request,'hello.html',{'name':'Vikram'}) ```
+
+4. HelloApp hello.html in Templates folder
+```html
+<html><body>
+{% if name %}
+<h1>Hello {{name}}</h1>
+{% else %}
+<h1>Hello Markiv</h1>
+{% endif %}
+</body></html>
+```
 	
 ## Install Packages in Django
 ```bash
