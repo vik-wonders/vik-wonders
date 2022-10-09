@@ -41,6 +41,20 @@
 	3. models.py -> Database models for this app
 	4. views.py -> Request handler for this app (takes request and returns response)
 	5. urls.py -> url pattern to funtion mapping
+
+### Django Project Code Snippet
+1. Project urls.py
+```django
+from django.contrib import admin
+from django.urls import path, include
+import debug_toolbar
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('HelloApp/', include('HelloApp.urls')),
+    path('__debug__/', include('debug_toolbar.urls')),
+]
+```
 	
 ## Install Packages in Django
 ```bash
