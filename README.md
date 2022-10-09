@@ -2,12 +2,14 @@
 ### Install Python, pipenv and VS Code
 0. Tutorial Video @ https://www.youtube.com/watch?v=rHux0gMZ3Eg
 1. Download latest python from www.python.org/downloads/ and Install it. Do select add to PATH option
-2. python --version (To check version of installed python)
-3. pip --version (To check version of installed pip)
-4. pip install pipenv (To install python project dependency management tool)
-5. Install VS Code from code.visualstudio.com
-6. vscode . (this opens VS code with cirrent directory)
-7. In VS Code serach for python in extensions and install python intellisens
+2. ```
+3. python --version (To check version of installed python)
+4. pip --version (To check version of installed pip)
+5. pip install pipenv (To install python project dependency management tool)
+6. ```
+7. Install VS Code from code.visualstudio.com
+8. vscode . (this opens VS code with cirrent directory)
+9. In VS Code serach for python in extensions and install python intellisens
 
 ### Creating Django project
 1. Create a folder for django project
