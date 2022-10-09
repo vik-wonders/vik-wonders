@@ -98,6 +98,71 @@ def say_hello(request):
 {% endif %}
 </body></html>
 ```
+
+### Django applications debugging in VS Code
+https://youtu.be/rHux0gMZ3Eg?t=2184
+
+### Using Django debug Toolbar
+https://youtu.be/rHux0gMZ3Eg?t=2653
+All steps here ar https://django-debug-toolbar.readthedocs.io/en/latest/installation.html
+1. pipenv install django-debug-toolbar
+2. Ensure INSTALLED_APPS setting has staticfiles entry in project settings.py file
+```python
+INSTALLED_APPS = [
+    # ...
+    "django.contrib.staticfiles",
+    # ...
+]
+
+STATIC_URL = "static/"
+```
+
+3. Ensure TEMPLETES setting has DjangoToolbar entry
+```python
+TEMPLATES = [
+    {
+        "BACKEND": "django.template.backends.django.DjangoTemplates",
+        "APP_DIRS": True,
+        # ...
+    }
+]
+```
+4. MAke entry in INSTALLED_APPS
+```python
+INSTALLED_APPS = [
+    # ...
+    "debug_toolbar",
+    # ...
+]
+```
+
+5. Entry in Project urls.py
+```python
+from django.urls import include, path
+
+urlpatterns = [
+    # ...
+    path('__debug__/', include('debug_toolbar.urls')),
+]
+```
+
+6. ENtry in Middleware
+```python
+MIDDLEWARE = [
+    # ...
+    "debug_toolbar.middleware.DebugToolbarMiddleware",
+    # ...
+]
+```
+7. Configure Internal IPs
+```python
+INTERNAL_IPS = [
+    # ...
+    "127.0.0.1",
+    # ...
+]
+```
+THis will open Debug toolbar when django receives request from localhost
 	
 ## Install Packages in Django
 ```bash
