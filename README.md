@@ -56,8 +56,8 @@ urlpatterns = [
 ]
 ```
 	
-	1. This is like a router for url patterns from main site to apps.
-	2. When url is ```http://127.0.0.1:8000/HelloApp/hello/``` then it matches ```path('HelloApp/', include('HelloApp.urls')),``` and forwards control to urls.py in HelloApp
+1. This is like a router for url patterns from main site to apps.
+2. When url is ```http://127.0.0.1:8000/HelloApp/hello/``` then it matches ```path('HelloApp/', include('HelloApp.urls')),``` and forwards control to urls.py in HelloApp
 
 2. HelloApp urls.py
 ```python
