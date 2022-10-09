@@ -43,7 +43,7 @@
 	5. urls.py -> url pattern to funtion mapping
 
 ### Django Project Code Snippet
-1.[ Project urls.py ]
+#### Project urls.py
 ```python
 from django.contrib import admin
 from django.urls import path, include
@@ -59,7 +59,7 @@ urlpatterns = [
 1. This is like a router for url patterns from main site to apps.
 2. When url is ```http://127.0.0.1:8000/HelloApp/hello/``` then it matches ```path('HelloApp/', include('HelloApp.urls')),``` and forwards control to urls.py in HelloApp
 
-2. HelloApp urls.py
+#### HelloApp urls.py
 ```python
 from django.urls import path
 from . import views
@@ -71,7 +71,7 @@ urlpatterns = [
 ```
 	1. Here 2nd part of URL is matched ``` path('hello/',views.say_hello) ```
 	2. function say_hello() is called from HelloApp views.py
-3. HelloApp Views.py
+#### HelloApp Views.py
 ```python
 from django.shortcuts import render
 from django.http import HttpResponse
@@ -85,7 +85,7 @@ def say_hello(request):
 ```
 	1. Here either a response text is returned by ``` return HttpResponse('Helo Dear Friends') ``` or Template is called and response is returned by ``` return render(request,'hello.html',{'name':'Vikram'}) ```
 
-4. HelloApp hello.html in Templates folder
+#### HelloApp hello.html in Templates folder
 ```html
 <html><body>
 {% if name %}
