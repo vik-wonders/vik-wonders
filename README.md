@@ -44,7 +44,7 @@
 
 ### Django Project Code Snippet
 1. Project urls.py
-```django
+```python
 from django.contrib import admin
 from django.urls import path, include
 import debug_toolbar
