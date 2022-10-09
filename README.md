@@ -43,7 +43,7 @@
 	5. urls.py -> url pattern to funtion mapping
 
 ### Django Project Code Snippet
-1. Project urls.py
+1.[ Project urls.py ]
 ```python
 from django.contrib import admin
 from django.urls import path, include
