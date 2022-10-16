@@ -5,9 +5,11 @@
 2. ``` python --version ``` (To check version of installed python)
 3. ``` pip --version ``` (To check version of installed pip)
 4. ``` pip install pipenv ``` (To install python project dependency management tool)
-5. Install VS Code from code.visualstudio.com
-6. ``` vscode . ``` (this opens VS code with cirrent directory)
-7. In VS Code serach for python in extensions and install python intellisens
+5. ``` pipenv uninstall --all ``` (To uninstall all packages)
+6. ``` pipenv --rm ``` (To remove current virtual environment)
+7. Install VS Code from code.visualstudio.com
+8. ``` vscode . ``` (this opens VS code with cirrent directory)
+9. In VS Code serach for python in extensions and install python intellisens
 
 ### Creating Django project
 1. Create a folder for django project
