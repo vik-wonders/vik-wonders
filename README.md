@@ -643,6 +643,13 @@ homepage-> more-> CameraDatabase
 10. product is unit no. 61 is U#1 and so on in progression. 80 is common
 11. /var/www/mis/common.php is custom commonly used functions
 ```
+##### Project wise issue summary Query
+
+```sql
+SELECT g.name AS Project, gfv.value AS TYPE, COUNT(i.issueid) AS total FROM issues i JOIN groups g ON i.primary_gid = g.gid AND g.group_type = 'Ongoing' JOIN statuses s ON s.sid = i.status JOIN Packages p ON p.id = i.package JOIN issue_group_fields igf ON igf.issueid = i.issueid AND igf.gfid = 0 JOIN group_field_values gfv ON gfv.gfid = igf.gfid AND gfv.value_idx = igf.value_idx AND g.name LIKE '%' AND gfv.value LIKE '%' AND p.agency LIKE '%' WHERE i.status != 10 AND i.severity like '%' GROUP BY g.name, gfv.value ORDER BY g.name, gfv.value, total DESC
+```
+	    
+	    
 ### Postfix mail troubleshooting
 ```
 1. edit this file and add following line to it /etc/postfix/smtp_sasl_password_map
