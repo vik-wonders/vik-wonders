@@ -648,6 +648,9 @@ homepage-> more-> CameraDatabase
 ```sql
 SELECT g.name AS Project, gfv.value AS TYPE, COUNT(i.issueid) AS total FROM issues i JOIN groups g ON i.primary_gid = g.gid AND g.group_type = 'Ongoing' JOIN statuses s ON s.sid = i.status JOIN Packages p ON p.id = i.package JOIN issue_group_fields igf ON igf.issueid = i.issueid AND igf.gfid = 0 JOIN group_field_values gfv ON gfv.gfid = igf.gfid AND gfv.value_idx = igf.value_idx AND g.name LIKE '%' AND gfv.value LIKE '%' AND p.agency LIKE '%' WHERE i.status != 10 AND i.severity like '%' GROUP BY g.name, gfv.value ORDER BY g.name, gfv.value, total DESC
 ```
+```
+SELECT g.name AS Project, gfv.value AS TYPE, i.problem as summary, i.summary as title ,u1.first_name,FROM_UNIXTIME(i.opened,'%d/%m/%Y') as opened_date,datediff(now(),from_unixtime(i.opened)) as age,ss.status as status_desc, prd.product as unit,concat(p.package,'-',p.agency) as package,concat(u.first_name,'-',u.last_name) as 'Assigned To' FROM issues i JOIN groups g ON i.primary_gid = g.gid AND g.group_type = 'Ongoing' JOIN statuses s ON s.sid = i.status JOIN Packages p ON p.id = i.package JOIN issue_group_fields igf ON igf.issueid = i.issueid AND igf.gfid = 0 JOIN group_field_values gfv ON gfv.gfid = igf.gfid AND gfv.value_idx = igf.value_idx AND g.name LIKE '%' AND gfv.value LIKE '%' AND p.agency LIKE '%' JOIN statuses ss on i.status=ss.sid JOIN issue_groups ig on i.issueid=ig.issueid JOIN users u on u.userid=ig.assigned_to JOIN users u1 on u1.userid=i.opened_by JOIN products prd on i.product=prd.pid WHERE i.status != 10 AND i.severity LIKE '%' ORDER BY g.name, gfv.value
+```
 	    
 	    
 ### Postfix mail troubleshooting
