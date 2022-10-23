@@ -1,3 +1,6 @@
+## IIS CONFIG
+https://techexpert.tips/iis/iis-disable-directory-browsing/
+
 ## Setup Python and Django
 ### Install Python, pipenv and VS Code
 0. Tutorial Video @ https://www.youtube.com/watch?v=rHux0gMZ3Eg
