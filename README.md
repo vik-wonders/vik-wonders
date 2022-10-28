@@ -1,3 +1,10 @@
+## IONIC Help Docs
+#### First App
+https://ionicframework.com/docs/angular/your-first-app
+#### Run the App
+https://capacitorjs.com/docs/v2/basics/building-your-app
+https://capacitorjs.com/docs/android#adding-the-android-platform
+
 ## IIS CONFIG
 https://techexpert.tips/iis/iis-disable-directory-browsing/
 
