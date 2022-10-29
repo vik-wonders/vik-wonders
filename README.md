@@ -30,6 +30,8 @@ $ ionic generate component login-form --change-detection=OnPush
 $ ionic generate directive ripple --skip-import
 $ ionic generate service api/user
 ```
+#### IONIC Routing How To
+https://www.youtube.com/watch?v=9v_yVGb41qU&t=48s
 
 ## IIS CONFIG
 https://techexpert.tips/iis/iis-disable-directory-browsing/
