@@ -4,7 +4,22 @@ https://ionicframework.com/docs/angular/your-first-app
 #### Run the App
 https://capacitorjs.com/docs/v2/basics/building-your-app
 https://capacitorjs.com/docs/android#adding-the-android-platform
+#### APP NAme change
+Go to created android folder and update as below
 
+```xml
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">PM Tool</string>
+    <string name="title_activity_main">PM Tool</string> <--This one worked
+    <string name="package_name">io.ionic.starter</string>
+    <string name="custom_url_scheme">io.ionic.starter</string>
+</resources>
+```
+
+```
+D:\MobileApp\photo-gallery\android\app\src\main\res\values\strings.xml
+```
 ## IIS CONFIG
 https://techexpert.tips/iis/iis-disable-directory-browsing/
 
