@@ -20,6 +20,17 @@ Go to created android folder and update as below
 ```
 D:\MobileApp\photo-gallery\android\app\src\main\res\values\strings.xml
 ```
+#### New page generate
+```
+$ ionic generate 
+$ ionic generate page
+$ ionic generate page contact
+$ ionic generate component contact/form
+$ ionic generate component login-form --change-detection=OnPush
+$ ionic generate directive ripple --skip-import
+$ ionic generate service api/user
+```
+
 ## IIS CONFIG
 https://techexpert.tips/iis/iis-disable-directory-browsing/
 
