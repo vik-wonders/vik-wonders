@@ -44,6 +44,8 @@ https://www.positronx.io/ionic-loading-controller-tutorial-with-ion-loading-exam
 1. https://capacitorjs.com/docs/apis/browser
 2. https://www.youtube.com/watch?v=C7pQl3VxDzE
 
+#### IONIC Angular Toast
+https://ionicframework.com/docs/api/toast
 
 ## IIS CONFIG
 https://techexpert.tips/iis/iis-disable-directory-browsing/
