@@ -1,3 +1,5 @@
+## Firebase Authentication
+https://www.positronx.io/ionic-firebase-authentication-tutorial-with-examples/
 ## Django X_FRAME_OPTIONS
 https://docs.djangoproject.com/en/4.1/ref/clickjacking/
 ## IONIC Help Docs
