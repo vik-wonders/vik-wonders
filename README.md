@@ -1,5 +1,6 @@
 ## Firebase Authentication
 https://www.positronx.io/ionic-firebase-authentication-tutorial-with-examples/
+https://www.positronx.io/full-angular-firebase-authentication-system/
 ## Django X_FRAME_OPTIONS
 https://docs.djangoproject.com/en/4.1/ref/clickjacking/
 ## IONIC Help Docs
@@ -46,6 +47,8 @@ https://www.positronx.io/ionic-loading-controller-tutorial-with-ion-loading-exam
 
 #### IONIC Angular Toast
 https://ionicframework.com/docs/api/toast
+#### IONIC Menu
+https://ionicframework.com/docs/api/menu#menu-toggle
 
 ## IIS CONFIG
 https://techexpert.tips/iis/iis-disable-directory-browsing/
