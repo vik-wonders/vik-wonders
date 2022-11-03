@@ -9,7 +9,7 @@ https://ionicframework.com/docs/angular/your-first-app
 #### Run the App
 https://capacitorjs.com/docs/v2/basics/building-your-app
 https://capacitorjs.com/docs/android#adding-the-android-platform
-#### APP NAme change
+#### APP Name change
 Go to created android folder and update as below
 
 ```xml
@@ -21,6 +21,10 @@ Go to created android folder and update as below
     <string name="custom_url_scheme">io.ionic.starter</string>
 </resources>
 ```
+#### IONIC app icon change
+https://www.youtube.com/watch?v=2Ce09by4qFE
+
+
 
 ```
 D:\MobileApp\photo-gallery\android\app\src\main\res\values\strings.xml
