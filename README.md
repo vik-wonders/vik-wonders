@@ -54,6 +54,48 @@ https://ionicframework.com/docs/api/toast
 #### IONIC Menu
 https://ionicframework.com/docs/api/menu#menu-toggle
 
+#### Exit IONIC 6 app on back button
+https://www.youtube.com/watch?v=yWYbYRrXsw0
+
+app.components.ts
+```ts
+import { Component } from '@angular/core';
+import {  Platform, IonRouterOutlet } from '@ionic/angular';
+import { SplashScreen } from '@capacitor/splash-screen';
+import { BackButtonService } from './services/back-button.service';
+import { Router } from '@angular/router';
+import { App } from '@capacitor/app';
+// NavController,
+@Component({
+  selector: 'app-root',
+  templateUrl: 'app.component.html',
+  styleUrls: ['app.component.scss'],
+})
+export class AppComponent {
+  constructor(
+    private platform: Platform,
+    // private backbuttonserverice: BackButtonService,
+    private router: Router,
+
+    ) {
+      this.platform.backButton.subscribeWithPriority(-1, () => {
+
+  const currenturl = this.router.url;
+          if (currenturl === '/homepage' || currenturl === '/login-page' || currenturl === '/')
+          {
+            // this.backbuttonserverice.init();
+            App.exitApp();
+
+          }
+      });
+    }
+
+  initializeApp() {
+       
+}
+}
+```
+
 ## IIS CONFIG
 https://techexpert.tips/iis/iis-disable-directory-browsing/
 
