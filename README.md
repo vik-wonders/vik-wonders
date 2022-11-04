@@ -1,3 +1,7 @@
+## Android Studio
+#### Create APK
+https://www.educative.io/answers/extracting-an-apk-file-from-android-studio
+
 ## Firebase Authentication
 https://www.positronx.io/ionic-firebase-authentication-tutorial-with-examples/
 https://www.positronx.io/full-angular-firebase-authentication-system/
