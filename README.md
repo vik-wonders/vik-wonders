@@ -1,7 +1,8 @@
 ## Android Studio
 #### Create APK
 https://www.educative.io/answers/extracting-an-apk-file-from-android-studio
-
+#### Set application version
+https://forum.ionicframework.com/t/where-to-set-the-version-code-in-a-ionic-capacitor-app/192084/6
 ## Firebase Authentication
 https://www.positronx.io/ionic-firebase-authentication-tutorial-with-examples/
 https://www.positronx.io/full-angular-firebase-authentication-system/
