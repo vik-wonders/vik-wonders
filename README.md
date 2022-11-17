@@ -809,7 +809,7 @@ sendmail_path=/usr/sbin/sendmail -t -i
 2. https://www.section.io/engineering-education/javascript-particles-effect-with-tsparticles/
 
 ## PM Website Audit
-#### Disable TLS
+#### How to disable TLS 1.0 and TLS 1.1 on Windows Server 2008/2016
 1. https://trustzone.com/knowledge-base/how-to-disable-tls-1-0-and-tls-1-1-on-windows-server-2008-2016/
 #### How to protect your IIS webserver from SWEET32 bug
 1. https://www.youtube.com/watch?v=nF2RLAbvfrY
