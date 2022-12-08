@@ -815,3 +815,12 @@ sendmail_path=/usr/sbin/sendmail -t -i
 1. https://www.youtube.com/watch?v=nF2RLAbvfrY
 #### Help for many audit points
 1. https://www.yeahhub.com/iis-server-hardening-banner-grabbing-prevention-techniques/
+#### Disble Server Version from response
+```
+  <system.webServer>
+	  <security>
+		  <requestFiltering removeServerHeader="true" />
+	  </security>
+	    // Rest-of-the-content
+  </system.webServer>
+```
