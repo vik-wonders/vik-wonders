@@ -817,6 +817,7 @@ sendmail_path=/usr/sbin/sendmail -t -i
 1. https://www.yeahhub.com/iis-server-hardening-banner-grabbing-prevention-techniques/
 #### Disble Server Version from response
 ```
+In Web.Config
   <system.webServer>
 	  <security>
 		  <requestFiltering removeServerHeader="true" />
