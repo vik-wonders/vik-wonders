@@ -825,3 +825,11 @@ In Web.Config
 	    // Rest-of-the-content
   </system.webServer>
 ```
+#### Disbale ASP .NET Version from response
+```
+<system.web>
+	    <httpRuntime enableVersionHeader="false" />
+	    // most probably no need to create separate httpRuntime element. Ass enableVersionHeader="false" to existing element
+<system.web>
+
+```
