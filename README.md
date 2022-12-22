@@ -837,8 +837,8 @@ In Web.Config
 1. units.completed= -1 (Not Completed)
 2. units.completed= 0 (Completed)
 3. units.completed= 99 (scrapped LPHPP)
-units.completed= -99 (Work stopped Khasiabara, Lata Tapovan)
-Logic 99 or others
-units.zerodate is common for all units for a stage
-units.zerodate is null (Never started)
-If TOC milestone is not achieved then unit is under construction i.e. ongoing
+4. units.completed= -99 (Work stopped Khasiabara, Lata Tapovan)
+5. Logic 99 or others
+6. units.zerodate is common for all units for a stage
+7. units.zerodate is null (Never started)
+8. If TOC milestone is not achieved then unit is under construction i.e. ongoing
