@@ -842,3 +842,27 @@ In Web.Config
 6. units.zerodate is common for all units for a stage
 7. units.zerodate is null (Never started)
 8. If TOC milestone is not achieved then unit is under construction i.e. ongoing
+
+## Hindrance Register Logic
+```sql
+SELECT
+    IF(
+    STATUS
+        = '',
+        (
+            CASE WHEN raised_by = 'NTPC' AND start_acceptance_agency = 0 THEN 'Acceptance / Rejection pending by Agency' WHEN raised_by = 'Agency' AND start_acceptance_ntpc = 0 THEN 'Acceptance / Rejection pending by NTPC' WHEN resolution = '' THEN 'Resolution pending' WHEN ISNULL(end_date) THEN 'End date pending' ELSE 'Closed'
+        END
+),
+STATUS
+) AS
+STATUS
+FROM
+    Hindrance_reg
+WHERE
+    id = 1976
+```
+
+For Hindrance to be closed, 04 conditions to be fulfilled
+1. NTPC and Agency, both must accept
+2. Resolution must be given i.e. resolution field should not be empty
+3. End date must be provided
