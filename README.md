@@ -815,6 +815,7 @@ sendmail_path=/usr/sbin/sendmail -t -i
 1. https://www.youtube.com/watch?v=nF2RLAbvfrY
 #### Help for many audit points
 1. https://www.yeahhub.com/iis-server-hardening-banner-grabbing-prevention-techniques/
+2. https://techexpert.tips/iis/iis-disable-directory-browsing/
 #### Disble Server Version from response
 ```
 In Web.Config
