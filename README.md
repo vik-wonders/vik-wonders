@@ -826,6 +826,9 @@ In Web.Config
 	    // Rest-of-the-content
   </system.webServer>
 ```
+#### Disable X-Powered-By PHP versin Response Header
+1. https://memorynotfound.com/remove-x-powered-by-php-from-http-response-header/#:~:text=Look%20for%20the%20expose_php%20attribute,from%20the%20HTTP%20Response%20Header.
+	    
 #### Disbale ASP .NET Version from response
 ```
 <system.web>
