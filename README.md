@@ -870,3 +870,8 @@ For Hindrance to be closed, 04 conditions to be fulfilled
 1. NTPC and Agency, both must accept
 2. Resolution must be given i.e. resolution field should not be empty
 3. End date must be provided
+
+## DMS View Logic
+1. User Role : can view all his created documents for specified project
+2. EIC Role : User Role + Packages assigned to him
+3. ppm : all documents of project assigned to him
