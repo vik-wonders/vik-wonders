@@ -884,4 +884,5 @@ SELECT `id`, `empno`, AES_DECRYPT(FROM_BASE64(password), 'mykey'), `name`, `time
 ```
 1. Here 'mypassord' is the value I want to encrypt. This is being insertted into password column
 2. 'mykey' is the Secret key
+3. https://www.percona.com/blog/column-level-encryption-in-mysql/
 	    
