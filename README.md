@@ -875,3 +875,13 @@ For Hindrance to be closed, 04 conditions to be fulfilled
 1. User Role : can view all his created documents for specified project
 2. EIC Role : User Role + Packages assigned to him
 3. ppm : all documents of project assigned to him
+
+	    
+## Encrypt data in MySql
+```
+INSERT INTO `testtable`(`empno`, `password`, `name`) VALUES ('10', TO_BASE64(AES_ENCRYPT('mypassword','mykey')),'vikram')
+SELECT `id`, `empno`, AES_DECRYPT(FROM_BASE64(password), 'mykey'), `name`, `time_stamp` FROM `testtable` WHERE id=7
+```
+1. Here 'mypassord' is the value I want to encrypt. This is being insertted into password column
+2. 'mykey' is the Secret key
+	    
