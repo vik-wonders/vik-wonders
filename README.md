@@ -895,7 +895,9 @@ SELECT `id`, `empno`, AES_DECRYPT(FROM_BASE64(password), 'mykey'), `name`, `time
 6. Instance ID : instance42842
 7. Token : xxu2h87vcmps4rtb
 
-Demo is limited to 100 Messages per Day.
+* Demo is limited to 100 Messages per Day.
+* Session logs out after 14 Days
+* Instance acn be authenticated using any WhatsApp Account
 
 	    
 ```
