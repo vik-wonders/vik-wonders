@@ -886,3 +886,13 @@ SELECT `id`, `empno`, AES_DECRYPT(FROM_BASE64(password), 'mykey'), `name`, `time
 2. 'mykey' is the Secret key
 3. https://www.percona.com/blog/column-level-encryption-in-mysql/
 	    
+## WhatsApp API
+1. https://user.ultramsg.com/index.php
+2. Login id : singh.markiv@gmail.com, Mob-9471001337, Password : Google Generated. Saved in Google Profile
+3. Create Instanace
+4. Authenticated instance with NTPC PMC WhatsApp Account-9650990154 (i.e. Lined the devices using QR Code)
+5. API URL : https://api.ultramsg.com/instance42842/
+6. Instance ID : instance42842
+7. Token : xxu2h87vcmps4rtb
+
+Demo is limited to 100 Messages per Day.
