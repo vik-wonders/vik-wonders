@@ -896,3 +896,67 @@ SELECT `id`, `empno`, AES_DECRYPT(FROM_BASE64(password), 'mykey'), `name`, `time
 7. Token : xxu2h87vcmps4rtb
 
 Demo is limited to 100 Messages per Day.
+
+	    
+```
+using RestSharp;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+
+namespace WhatsAPP_API
+{
+	public partial class Form1 : Form
+	{
+		public Form1()
+		{
+			InitializeComponent();
+		}
+
+		private void Form1_Load(object sender, EventArgs e)
+		{
+			byte[] AsBytes = File.ReadAllBytes("C:\\Users\\ftpuser\\Downloads\\NTPC-BHEL Progress Report.pdf");
+
+			String AsBase64String = Convert.ToBase64String(AsBytes);
+
+			///////////
+
+			var url = "https://api.ultramsg.com/instance42738/messages/document";
+
+            var client =
+
+				new RestClient(url);
+
+			var request = new RestRequest(url, Method.Post);
+
+			request.AddHeader("content-type", "application/x-www-form-urlencoded");
+
+			request.AddParameter("token", "j4p6v7ff2gs4eowz", ParameterType.GetOrPost);
+
+			request.AddParameter("to", "+919471001337", ParameterType.GetOrPost);
+
+			request.AddParameter("document", AsBase64String, ParameterType.GetOrPost);
+
+			request.AddParameter("caption", "Hello", ParameterType.GetOrPost);
+
+			request.AddParameter("filename", "NTPC-BHEL Progress Report.pdf");
+
+
+
+
+
+			RestResponse response = client.Execute(request);
+
+		}
+	}
+}
+
+```
