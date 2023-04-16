@@ -965,3 +965,7 @@ namespace WhatsAPP_API
 
 ## Week No to date mapping
 	    https://www.epochconverter.com/weeks/2023
+	    
+## SQL Validator and SQL generator
+
+https://www.eversql.com/sql-syntax-check-validator/
