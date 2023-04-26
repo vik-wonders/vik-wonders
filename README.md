@@ -969,3 +969,7 @@ namespace WhatsAPP_API
 ## SQL Validator and SQL generator
 
 https://www.eversql.com/sql-syntax-check-validator/
+
+	    
+## SAP HANA Features
+https://skillstek.com/sap-versions/
