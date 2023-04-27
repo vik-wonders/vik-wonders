@@ -973,3 +973,6 @@ https://www.eversql.com/sql-syntax-check-validator/
 	    
 ## SAP HANA Features
 https://skillstek.com/sap-versions/
+
+## Badminton Rules
+https://www.bbc.co.uk/bitesize/guides/zp9ck7h/revision/3
