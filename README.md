@@ -811,6 +811,9 @@ sendmail_path=/usr/sbin/sendmail -t -i
 ## PM Website Audit
 #### How to disable TLS 1.0 and TLS 1.1 on Windows Server 2008/2016
 1. https://trustzone.com/knowledge-base/how-to-disable-tls-1-0-and-tls-1-1-on-windows-server-2008-2016/
+
+#### Enable TLS 1.2 on WIndows Server 2019
+1. https://thesecmaster.com/how-to-enable-tls-1-2-and-tls-1-3-on-windows-server/
 #### How to protect your IIS webserver from SWEET32 bug
 1. https://www.youtube.com/watch?v=nF2RLAbvfrY
 #### Help for many audit points
