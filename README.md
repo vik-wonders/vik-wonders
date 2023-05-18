@@ -981,7 +981,7 @@ https://skillstek.com/sap-versions/
 https://www.bbc.co.uk/bitesize/guides/zp9ck7h/revision/3
 	    
 ## Datatable.net conditional cell background color
-```
+```javascript
             $('#tb').DataTable({
                 "order": [0, "asc"], "paging": true, "lengthMenu": [10, 25, 50, "All"], "iDisplayLength": 200, "searching": true, "fixedHeader": true, dom: 'Bfrtip', buttons: ['excel',
                     {
