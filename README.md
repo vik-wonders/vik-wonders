@@ -979,3 +979,27 @@ https://skillstek.com/sap-versions/
 
 ## Badminton Rules
 https://www.bbc.co.uk/bitesize/guides/zp9ck7h/revision/3
+	    
+## Datatable.net conditional cell background color
+```
+            $('#tb').DataTable({
+                "order": [0, "asc"], "paging": true, "lengthMenu": [10, 25, 50, "All"], "iDisplayLength": 200, "searching": true, "fixedHeader": true, dom: 'Bfrtip', buttons: ['excel',
+                    {
+                        extend: 'pdfHtml5',
+                        orientation: 'landscape',
+                        pageSize: 'LEGAL'
+                    }
+                ], rowGroup: {
+
+                    dataSrc: 0
+                },
+                columnDefs: [{ targets: 0, visible: false }],
+                'rowCallback': function (row, data, index) {
+                    //console.log("Data :" + data[3] + ", type : " + typeof data[3]);
+                 if (data[3] == "0") {
+                     $(row).find('td:eq(2)').css('background', 'red');
+                     //$(row).css('color', 'red');
+                }
+                }
+            });
+```
