@@ -840,6 +840,13 @@ In Web.Config
 <system.web>
 
 ```
+#### Disable debugging
+```
+<compilation debug="false" targetFramework="4.8">
+```
+	    
+	    
+	    
 ## Project/ Unit ongoing/completed logic
 1. units.completed= -1 (Not Completed)
 2. units.completed= 0 (Completed)
