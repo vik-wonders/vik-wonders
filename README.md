@@ -1013,3 +1013,6 @@ https://www.bbc.co.uk/bitesize/guides/zp9ck7h/revision/3
 ## CAPTCHA
 1. https://www.c-sharpcorner.com/article/asp-net-webform-user-registration-with-captcha/
 2. https://help.syncfusion.com/aspnet/captcha/getting-started
+
+## Merge Excell sheets into one
+[	    ](https://excelchamps.com/blog/merge-excel-files-one-workbook/)
