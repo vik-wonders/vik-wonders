@@ -1015,4 +1015,4 @@ https://www.bbc.co.uk/bitesize/guides/zp9ck7h/revision/3
 2. https://help.syncfusion.com/aspnet/captcha/getting-started
 
 ## Merge Excell sheets into one
-[	    ](https://excelchamps.com/blog/merge-excel-files-one-workbook/)
+https://excelchamps.com/blog/merge-excel-files-one-workbook/
