@@ -1016,3 +1016,6 @@ https://www.bbc.co.uk/bitesize/guides/zp9ck7h/revision/3
 
 ## Merge Excell sheets into one
 https://excelchamps.com/blog/merge-excel-files-one-workbook/
+
+## ASP .NET Password Validators/ Strong Password Policy
+1. https://www.aspsnippets.com/Articles/Implement-Password-Policy-using-Regular-Expressions-and-ASPNet-RegularExpression-Validator.aspx
