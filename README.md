@@ -1019,3 +1019,10 @@ https://excelchamps.com/blog/merge-excel-files-one-workbook/
 
 ## ASP .NET Password Validators/ Strong Password Policy
 1. https://www.aspsnippets.com/Articles/Implement-Password-Policy-using-Regular-Expressions-and-ASPNet-RegularExpression-Validator.aspx
+
+
+## Engineering Drawings release categories
+* CAT-I : Approved 
+* CAT-II : Approved with Comment
+* CAT-II : Rejected
+* CAT-IV & CAT-IV-R : These are Auto Approved. For information Only
