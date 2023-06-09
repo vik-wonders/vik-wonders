@@ -1026,3 +1026,7 @@ https://excelchamps.com/blog/merge-excel-files-one-workbook/
 * CAT-II : Approved with Comment
 * CAT-II : Rejected
 * CAT-IV & CAT-IV-R : These are Auto Approved. For information Only
+
+## Create Web API or Web Service
+1. https://www.tutorialsteacher.com/webapi/request-response-data-formats-in-web-api
+2. https://dotnettutorials.net/lesson/creating-web-api-application/
