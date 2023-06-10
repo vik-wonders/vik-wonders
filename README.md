@@ -1030,3 +1030,6 @@ https://excelchamps.com/blog/merge-excel-files-one-workbook/
 ## Create Web API or Web Service
 1. https://www.tutorialsteacher.com/webapi/request-response-data-formats-in-web-api
 2. https://dotnettutorials.net/lesson/creating-web-api-application/
+
+## Digital Signature on Multiple PDF Files in single go
+https://www.youtube.com/watch?v=RKG5g1rDmQc
