@@ -1033,3 +1033,30 @@ https://excelchamps.com/blog/merge-excel-files-one-workbook/
 
 ## Digital Signature on Multiple PDF Files in single go
 https://www.youtube.com/watch?v=RKG5g1rDmQc
+
+## HTML element blink
+```html
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+    <head>
+        <title>Example of a blinking text using CSS within a marquee</title>
+        <style>
+            .blink {
+                animation: blinker 3.5s linear infinite;
+                color: red;
+                font-family: sans-serif;
+            }
+            @keyframes blinker {
+                50% {
+                    opacity: 0;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <h5 class="blink">This is an example of blinking text using CSS within a marquee.</h5>
+    </body>
+```
+https://www.w3schools.com/css/css3_animations.asp
