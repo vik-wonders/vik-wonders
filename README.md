@@ -1060,3 +1060,76 @@ https://www.youtube.com/watch?v=RKG5g1rDmQc
     </body>
 ```
 https://www.w3schools.com/css/css3_animations.asp
+
+## Logic for document uploading status and Hindrance & Chronology register uploading status
+```mysql
+SELECT 
+    ongoingprojtable.project AS Project,
+    ongoingprojtable.projecttype AS TYPE,
+    IFNULL(contacts_New.name, '**') AS 'Project Manager',
+    COUNT(Hindrance_reg.id) AS 'Hindrance (Total)'
+FROM
+    (
+        (
+        SELECT DISTINCT
+            projectname AS project,
+            'A' AS projecttype
+        FROM
+            Projects_ntpc p,
+            Units u,
+            MileStones m
+        WHERE
+            p.projectname = u.project AND u.project = m.project AND u.unit = m.unit AND u.zerodate IS NOT NULL AND u.completed != 0 AND u.completed != 99 AND m.milestone = 'TOC' AND m.achieved != 'A' AND p.Fuel IN('Coal', 'Hydro') AND p.projectname NOT IN('Khurja STPP')
+    )
+UNION
+    (
+    SELECT DISTINCT
+        CONCAT(pk.Project, '-FGD') AS project,
+        'B' AS projecttype
+    FROM
+        Packages pk,
+        Projects_ntpc p
+    WHERE
+        pkgcode = 'FGD' AND pk.ID = p.SOX_pkg AND project NOT IN(
+            'Barh-I',
+            'Barh-II',
+            'North Karanpura',
+            'Patratu STPP',
+            'Telangana Ph1',
+            'Khurja STPP',
+            'Bhilai',
+            'Khargone'
+        )
+)
+    ) AS ongoingprojtable
+JOIN contacts_New ON
+    (
+       ongoingprojtable.project = contacts_New.workarea_project OR contacts_New.workarea_fgd LIKE IF(
+            LOCATE('FGD', ongoingprojtable.project) > 0,
+            CONCAT(
+                '%',
+                SUBSTR(
+                    ongoingprojtable.project,
+                    1,
+                    LENGTH(ongoingprojtable.project) -4
+                ),
+                '%'
+            ),
+            CONCAT(
+                '%',
+                ongoingprojtable.project,
+                '-DUPLICATE',
+                '%'
+            )
+        ) and  contacts_New.is_duplicate NOT LIKE 'Y'
+    ) 
+LEFT JOIN Hindrance_reg ON REPLACE
+    (ongoingprojtable.project, '-FGD', '') = Hindrance_reg.project
+WHERE
+    Hindrance_reg.start_date <= '2023-07-16'
+GROUP BY
+    ongoingprojtable.project
+ORDER BY
+    `Type` ASC,
+    Project
+```
