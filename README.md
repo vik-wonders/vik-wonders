@@ -1126,21 +1126,22 @@ JOIN contacts_New ON
 LEFT JOIN Hindrance_reg ON REPLACE
     (ongoingprojtable.project, '-FGD', '') = Hindrance_reg.project
 WHERE
-    Hindrance_reg.start_date <= '2023-07-16'
+    Hindrance_reg.start_date between '2023-07-01' and '2023-07-16'
 GROUP BY
     ongoingprojtable.project
 ORDER BY
     `Type` ASC,
     Project
 ```
-1. This query is displaying the monthly status of Hindrance and Chronology register
+1. This query is displaying the monthly status of Hindrance register (Almost same logic for Chronology register)
 2. Query's FROM statement is union of two Queries; named as "ongoingprojtable".
 3. First Query lists all ongoing Projects. Any filtration on Ongoing projects can be applied here in where clause
 4. Second Query lists all FGD Projects. Any filtration on Ongoing projects can be applied here in where clause. Further If a project is both Ongoing and FGD then in such case there may be requirement to remove FGD project. That filtration can be done here in where clause. FGD Projects are suffixed with "-FGD"
 5. Then "ongoingprojtable" is joined with "contacts_New" table to add the name of Project Manager.
 6. ongoingprojtable.project is matched with contacts_New.workarea_project : workarea_project column has name of ongoing project a project manager is managing. Only SIngle Project name is assumed in the workarea_project column.
 7. Then It is checked if ongoingprojtable.project is contained as substring in contacts_New.workarea_fgd. Workarea_fgd field has multiple FGD Project names, semi colon seperated. FGD Project name does not have '-FGD" suffixes.
-8. Here if ongoingprojtable.project has "-FGD" suffixed then it is removed so that Substring match can be performed with contacts_New.workarea_fgd. THis is done to ensur ethat only FGD project is matched with contacts_New.workarea_fgd.
+8. Here if ongoingprojtable.project has "-FGD" suffixed then it is removed so that Substring match can be performed with contacts_New.workarea_fgd. THis is done to ensure that only FGD project is matched with contacts_New.workarea_fgd.
 9. If ongoingprojtable.project does not has "-FGD" suffixed then, its the ongoing project and this is eliminated by attaching suffix "-DUPLICATE", as that will never match
 10. contacts_New.is_duplicate NOT LIKE 'Y' : is done to remove duplicate employee entries in Contact_new
 11. This is then Joined with  Hindrance_reg on  ongoingprojtable.project = Hindrance_reg.project. "-FGD is removed as that is required to match the project name"
+12. Then  Hindrance_reg.start_date between '2023-07-01' and '2023-07-16' : filter is applied for period of hindrances
