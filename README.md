@@ -1145,3 +1145,30 @@ ORDER BY
 10. contacts_New.is_duplicate NOT LIKE 'Y' : is done to remove duplicate employee entries in Contact_new
 11. This is then Joined with  Hindrance_reg on  ongoingprojtable.project = Hindrance_reg.project. "-FGD is removed as that is required to match the project name"
 12. Then  Hindrance_reg.start_date between '2023-07-01' and '2023-07-16' : filter is applied for period of hindrances
+
+## Jquery DataTables.net Audo fill serial No in Table
+```javascript
+<script>  $(document).ready(function () {
+
+  	$('.dtable').DataTable({
+            "paging": true, "iDisplayLength": 200, "searching": true, dom: 'Bfrtip', order: [[1, 'asc']],
+  		buttons: ['excel',
+		   {
+		   	extend: 'pdfHtml5',
+		   	orientation: 'landscape',
+		   	pageSize: 'A3'
+
+		   }
+  		],
+			fixedHeader: true,
+            "fnRowCallback": function (nRow, aData, iDisplayIndex, iDisplayIndexFull) {
+                //debugger;
+                var index = iDisplayIndexFull + 1;
+                $("td:first", nRow).html(index);
+                return nRow;
+            }
+  	});
+
+  });
+    </script>
+```
