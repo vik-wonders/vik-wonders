@@ -1174,8 +1174,8 @@ ORDER BY
 ```
 
 ## Capex Invoice pending with EIC
-```
- 1. Dim flag_invoice_capex_paymentdata As String = executeDB("update capex_pradip_eicdata e, capex_pradip_data d set e.remark='capex' where e.P_PO_NUMBER=d.P_PO_NUMBER And ( d.P_PAY_DOC_PAYMENT_METHOD in ('M','O','A') or (d.p_po_number like '55000%' and d.P_PAY_DOC_PAYMENT_METHOD in ('C','D','L','G','B')) )")
+```vb
+1. Dim flag_invoice_capex_paymentdata As String = executeDB("update capex_pradip_eicdata e, capex_pradip_data d set e.remark='capex' where e.P_PO_NUMBER=d.P_PO_NUMBER And ( d.P_PAY_DOC_PAYMENT_METHOD in ('M','O','A') or (d.p_po_number like '55000%' and d.P_PAY_DOC_PAYMENT_METHOD in ('C','D','L','G','B')) )")
 2. Dim flag_invoice_capex_5500 As String = executeDB("update capex_pradip_eicdata set remark='capex' where p_po_number Like '55000%'")
 3. Dim flag_invoice_pending As String = executeDB("update capex_pradip_eicdata e LEFT JOIN capex_pradip_data d ON e.DOCUMENT_REFERENCE_NO = d.P_DOCUMENT_REFERENCE_NO set e.remark='capex-pending' where d.P_DOCUMENT_REFERENCE_NO is NULL and e.remark like '%capex%'")
 ```
