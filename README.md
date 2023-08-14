@@ -1171,4 +1171,13 @@ ORDER BY
 
   });
     </script>
+```vb
+## Capex Invoice pending with EIC
 ```
+ 1. Dim flag_invoice_capex_paymentdata As String = executeDB("update capex_pradip_eicdata e, capex_pradip_data d set e.remark='capex' where e.P_PO_NUMBER=d.P_PO_NUMBER And ( d.P_PAY_DOC_PAYMENT_METHOD in ('M','O','A') or (d.p_po_number like '55000%' and d.P_PAY_DOC_PAYMENT_METHOD in ('C','D','L','G','B')) )")
+2. Dim flag_invoice_capex_5500 As String = executeDB("update capex_pradip_eicdata set remark='capex' where p_po_number Like '55000%'")
+3. Dim flag_invoice_pending As String = executeDB("update capex_pradip_eicdata e LEFT JOIN capex_pradip_data d ON e.DOCUMENT_REFERENCE_NO = d.P_DOCUMENT_REFERENCE_NO set e.remark='capex-pending' where d.P_DOCUMENT_REFERENCE_NO is NULL and e.remark like '%capex%'")
+```
+1. In Step-1 Above, Match  capex_pradip_eicdata.P_PO_NUMBER=capex_pradip_data.P_PO_NUMBER and check if PO is a CAPEX PO as per our established Logic. If yes then set capex_pradip_eicdata.remark to 'capex' for all matching invoices
+2. In Step-2 Above, set capex_pradip_eicdata.remark to 'capex' for all matching invoices having PO No like '55000%'
+3. In Step-3 Above,  Match (Left Join) capex_pradip_eicdata.DOCUMENT_REFERENCE_NO with capex_pradip_data.P_DOCUMENT_REFERENCE_NO for all invoices having remark='capex' as per Step-1 & 2 above. Invoices which dont have any match on Payment side Categorize them as PENDING CAPEX INVOICES by setting capex_pradip_eicdata.remark to 'capex-pending'
