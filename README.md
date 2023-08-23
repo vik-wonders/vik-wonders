@@ -1185,6 +1185,7 @@ ORDER BY
 
 ## Install Zoneminder on Ubuntu
 ### Ubuntu 22.04 | 20.04 LTS
+0. https://zoneminder.com/downloads/
 1. https://linux.how2shout.com/how-to-install-zoneminder-on-ubuntu-22-04-20-04-lts/
 2. https://zoneminder.readthedocs.io/en/latest/installationguide/ubuntu.html
 3. https://wiki.zoneminder.com/How_to_Install_ZoneMinder_Master_on_UBUNTU_20.04_LTS_(Focal_Fossa)
