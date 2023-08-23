@@ -1182,3 +1182,12 @@ ORDER BY
 1. In Step-1 Above, Match  capex_pradip_eicdata.P_PO_NUMBER=capex_pradip_data.P_PO_NUMBER and check if PO is a CAPEX PO as per our established Logic. If yes then set capex_pradip_eicdata.remark to 'capex' for all matching invoices
 2. In Step-2 Above, set capex_pradip_eicdata.remark to 'capex' for all matching invoices having PO No like '55000%'
 3. In Step-3 Above,  Match (Left Join) capex_pradip_eicdata.DOCUMENT_REFERENCE_NO with capex_pradip_data.P_DOCUMENT_REFERENCE_NO for all invoices having remark='capex' as per Step-1 & 2 above. Invoices which dont have any match on Payment side Categorize them as PENDING CAPEX INVOICES by setting capex_pradip_eicdata.remark to 'capex-pending'
+
+## Install Zoneminder on Ubuntu
+### Ubuntu 22.04 | 20.04 LTS
+1. https://linux.how2shout.com/how-to-install-zoneminder-on-ubuntu-22-04-20-04-lts/
+2. https://zoneminder.readthedocs.io/en/latest/installationguide/ubuntu.html
+3. https://wiki.zoneminder.com/How_to_Install_ZoneMinder_Master_on_UBUNTU_20.04_LTS_(Focal_Fossa)
+
+## How To Install the Apache Web Server on Ubuntu 22.04
+1. https://www.digitalocean.com/community/tutorials/how-to-install-the-apache-web-server-on-ubuntu-22-04
