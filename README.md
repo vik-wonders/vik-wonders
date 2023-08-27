@@ -1192,3 +1192,21 @@ ORDER BY
 
 ## How To Install the Apache Web Server on Ubuntu 22.04
 1. https://www.digitalocean.com/community/tutorials/how-to-install-the-apache-web-server-on-ubuntu-22-04
+
+## How to set Foreign Key in PhpmyAdmin Mysql
+
+```
+A FOREIGN KEY is a field (or collection of fields) in one table, that refers to the PRIMARY KEY in another table. The table with the foreign key is called the child table, and the table with the primary key is called the referenced or parent table.
+```
+
+```
+Open phpMyAdmin.
+Select the table that you want to add the foreign key constraints to.
+Select the Structure tab.
+Click on the Relational View.
+Add a constraint name, like user_FK.
+Select the column: user_id.
+Select the database: dino_test_db.
+Select the table that user_id points to: users.
+Select the column: xxx
+```
