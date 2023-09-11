@@ -1210,3 +1210,8 @@ Select the database: dino_test_db.
 Select the table that user_id points to: users.
 Select the column: xxx
 ```
+
+## Django website auto refresh on change
+1. Click IIS top level FastCGISetting
+2. Edit the required handler entry
+3. look for Monitor changes to file option
