@@ -1215,3 +1215,12 @@ Select the column: xxx
 1. Click IIS top level FastCGISetting
 2. Edit the required handler entry
 3. look for Monitor changes to file option
+## Disbale button to prevent further clicks (in case of doc uploading)
+```javascript
+<script type="text/javascript">
+    function DisableButton() {
+        document.getElementById("<%=Button1.ClientID %>").disabled = true;
+    }
+    window.onbeforeunload = DisableButton;
+</script>
+```
