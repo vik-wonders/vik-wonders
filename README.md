@@ -1224,3 +1224,19 @@ Select the column: xxx
     window.onbeforeunload = DisableButton;
 </script>
 ```
+## Jquery Datatables custom date sorting
+#### Add below .js below datatables.min.js
+1. https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js
+2. https://cdn.datatables.net/plug-ins/1.13.6/sorting/datetime-moment.js
+3. Initialise as below
+   ```javascript
+       <script type="text/javascript">
+        $(document).ready(function () {
+
+            $.fn.dataTable.moment('DD-MMM-YY');
+   .
+   .
+   .
+   ```
+   4. moment.js documentation of date formats
+   5. http://momentjs.com/docs/#/displaying/
