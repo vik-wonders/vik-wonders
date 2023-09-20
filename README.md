@@ -1240,3 +1240,6 @@ Select the column: xxx
    ```
    4. moment.js documentation of date formats
    5. http://momentjs.com/docs/#/displaying/
+
+## Bootstrap color hex codes
+https://mdbootstrap.com/docs/standard/extended/colors-code/
