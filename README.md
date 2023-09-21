@@ -1243,3 +1243,16 @@ Select the column: xxx
 
 ## Bootstrap color hex codes
 https://mdbootstrap.com/docs/standard/extended/colors-code/
+
+
+## Center div horizontally and vertically
+```
+.center {
+  border: 5px solid;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+}
+```
