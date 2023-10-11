@@ -1280,3 +1280,87 @@ const csvContent = results.map((line)=>{
 }).join("\n");
 console.log(csvContent)
 ```
+## NTPC Capacity Addition logic (inc. decommissioned units)
+```sql
+  SELECT 
+    commng_date,
+    CASE
+        WHEN MONTH(commng_date) <= 3 THEN YEAR(commng_date) - 1
+        ELSE YEAR(commng_date)
+    END AS FY,
+    CONCAT(c.project,
+            ' U#',
+            CONVERT( c.unit , CHAR (2))) AS Project,
+    capacity AS 'Capacity',
+			p.CommonName,
+			p.Region,
+            p.State,
+            p.Latitude,
+            p.Longitude,
+            p.Fuel,
+            p.Ownership
+
+FROM
+    vw_commng_mile c,(SELECT 
+        ProjectName,
+        CommonName,
+            Region,
+            State,
+            Latitude,
+            Longitude,
+            Fuel,
+            Ownership
+    FROM
+        `Projects_ntpc`) AS p
+WHERE
+    achieved = 'A' AND c.capacity > 0 and c.project=p.ProjectName
+
+UNION 
+
+SELECT 
+    v.commng_date, v.FY, v.Project, c.Capacity,	p.CommonName,p.Region,
+            p.State,
+            p.Latitude,
+            p.Longitude,
+            p.Fuel,
+            p.Ownership
+FROM
+    (SELECT 
+        commng_date,
+            CASE
+                WHEN MONTH(commng_date) <= 3 THEN YEAR(commng_date) - 1
+                ELSE YEAR(commng_date)
+            END AS FY,
+            CONCAT(c.project, ' U#', CONVERT( c.unit , CHAR (2))) AS Project,
+            capacity AS 'Capacity',
+            c.project AS 'pname'
+    FROM
+        vw_commng_mile c
+    WHERE
+        achieved = 'A' AND c.capacity = 0) AS v,
+    (SELECT 
+        CONCAT(`Project`, ' U#', `Unit`) AS Project,
+            `dcomm_capacity` AS Capacity,
+            `Project` AS 'pname'
+    FROM
+        `Units`
+    WHERE
+        `dcomm_date` IS NOT NULL) AS c,
+    (SELECT 
+        ProjectName,
+        CommonName,
+            Region,
+            State,
+            Latitude,
+            Longitude,
+            Fuel,
+            Ownership
+    FROM
+        `Projects_ntpc`) AS p
+WHERE
+    v.Project = c.Project
+        AND v.pname = p.ProjectName
+        AND c.pname = p.ProjectName
+ORDER BY commng_date
+
+```
