@@ -1364,3 +1364,7 @@ WHERE
 ORDER BY commng_date
 
 ```
+## Django ORM to SQL
+```
+https://amitness.com/2018/10/django-orm-for-sql-users/
+```
