@@ -1368,3 +1368,6 @@ ORDER BY commng_date
 ```
 https://amitness.com/2018/10/django-orm-for-sql-users/
 ```
+
+## ASP .NET CORE WEB API
+1. https://github.com/mahedee/articles/blob/master/dot-net-core/HowToCreateWebAPIinASP.NETCOrewitMySQL.md
