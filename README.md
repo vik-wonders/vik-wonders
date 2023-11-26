@@ -1381,7 +1381,8 @@ https://amitness.com/2018/10/django-orm-for-sql-users/
    3. Microsoft.EntityFrameworkCore.Design
    4. Pomelo.EntityFrameworkCore.MySql
 5. Create Folder Models-> Users.cs
-   ```csharp
+
+```csharp
    namespace CRUDWebAPIWithMySQL.Models
 {
 	public class User
@@ -1394,8 +1395,9 @@ https://amitness.com/2018/10/django-orm-for-sql-users/
 
 	}
 }
-   ```
-6.Create Folder EntityFramework-> ApplicationDbContext.cs
+```
+6. Create Folder EntityFramework-> ApplicationDbContext.cs
+
 ```csharp
 using CRUDWebAPIWithMySQL.Models;
 using Microsoft.EntityFrameworkCore;
@@ -1412,9 +1414,10 @@ namespace CRUDWebAPIWithMySQL.EntityFrameWork
 		public DbSet<User> users { get; set; }
 	}
 }
+
 ```
 7. Create Folder Repository-> IUserRepository.cs & UserRepository.cs
-   ```csharp
+```csharp
 IUserRepository.cs
 
 using CRUDWebAPIWithMySQL.Models;
@@ -1470,7 +1473,7 @@ namespace CRUDWebAPIWithMySQL
 		}
 	}
 }
-   ```
+```
 7. appsetting.json-> Add   "ConnectionStrings": { "UsersConnection": "Server=localhost;port=3306;Database=UsersDb;User Id=root;Password=Autumn@2023;" },
 9. Add controler of type API UsersController.cs
 10. ```csharp
@@ -1519,8 +1522,9 @@ namespace CRUDWebAPIWithMySQL.Controllers
 
 	}
 }
-    ```
+```
 8. Program.cs-> After Line-5, Add
+
 ```csharp
 builder.Services.AddDbContext<ApplicationDbContext>(t => t.UseMySql(builder.Configuration.GetConnectionString("UsersConnection"), new MySqlServerVersion(new Version(8, 0, 35))));
 
