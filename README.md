@@ -1371,3 +1371,163 @@ https://amitness.com/2018/10/django-orm-for-sql-users/
 
 ## ASP .NET CORE WEB API
 1. https://github.com/mahedee/articles/blob/master/dot-net-core/HowToCreateWebAPIinASP.NETCOrewitMySQL.md
+### CodeFirst CRUD
+1. Open VS-2022
+2. Create project of Type "ASP.NET Core Web API" with name "CRUDWebAPIWithMySQL"
+3. Uncheck SSL checkbox
+4. Add following 4 Packages using Nuget Package Manager
+   1. Microsoft.EntityFrameworkCore
+   2. Microsoft.EntityFrameworkCore.Tools
+   3. Microsoft.EntityFrameworkCore.Design
+   4. Pomelo.EntityFrameworkCore.MySql
+5. Create Folder Models-> Users.cs
+   ```csharp
+   namespace CRUDWebAPIWithMySQL.Models
+{
+	public class User
+	{
+		public int Id { get; set; }
+		public string Name { get; set; }
+		public string Email { get; set; }
+		public string Password { get; set; }
+		
+
+	}
+}
+   ```
+6.Create Folder EntityFramework-> ApplicationDbContext.cs
+```csharp
+using CRUDWebAPIWithMySQL.Models;
+using Microsoft.EntityFrameworkCore;
+
+namespace CRUDWebAPIWithMySQL.EntityFrameWork
+{
+	public class ApplicationDbContext:DbContext
+	{
+		public ApplicationDbContext(DbContextOptions options) : base(options)
+		{
+
+		}
+
+		public DbSet<User> users { get; set; }
+	}
+}
+```
+7. Create Folder Repository-> IUserRepository.cs & UserRepository.cs
+   ```csharp
+IUserRepository.cs
+
+using CRUDWebAPIWithMySQL.Models;
+
+namespace CRUDWebAPIWithMySQL.Repository
+{
+	public interface IUserRepository
+	{
+		int CreateUser(User user);
+		public IEnumerable<User> GetAllUsers();
+		public int UpdateUser(User user);
+		public int DeleteUser(User user);
+	}
+}
+
+UserRepository.cs
+
+using CRUDWebAPIWithMySQL.EntityFrameWork;
+using CRUDWebAPIWithMySQL.Models;
+using CRUDWebAPIWithMySQL.Repository;
+
+namespace CRUDWebAPIWithMySQL
+{
+	public class UserRepository : IUserRepository
+	{
+
+		private readonly ApplicationDbContext applicationDbContext;
+        public UserRepository(ApplicationDbContext _applicationDbContext)
+        {
+			applicationDbContext = _applicationDbContext;
+        }
+        public int CreateUser(User user)
+		{
+			 applicationDbContext.users.Add(user);
+			return applicationDbContext.SaveChanges();
+		}
+
+		public IEnumerable<User> GetAllUsers()
+		{
+			return applicationDbContext.users.ToList();
+		}
+
+		int IUserRepository.DeleteUser(User user)
+		{
+			applicationDbContext.users.Remove(user);
+			return applicationDbContext.SaveChanges();
+		}
+
+		int IUserRepository.UpdateUser(User user)
+		{
+			applicationDbContext.users.Update(user);
+			return applicationDbContext.SaveChanges();
+		}
+	}
+}
+   ```
+7. appsetting.json-> Add   "ConnectionStrings": { "UsersConnection": "Server=localhost;port=3306;Database=UsersDb;User Id=root;Password=Autumn@2023;" },
+9. Add controler of type API UsersController.cs
+10. ```csharp
+    using CRUDWebAPIWithMySQL.Models;
+using CRUDWebAPIWithMySQL.Repository;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+
+namespace CRUDWebAPIWithMySQL.Controllers
+{
+	[Route("api/[controller]")]
+	[ApiController]
+	public class UsersController : ControllerBase
+	{
+		public readonly IUserRepository iuserRepository;
+        public UsersController(IUserRepository _iuserRepository)
+        {
+			iuserRepository = _iuserRepository;
+            
+        }
+
+		[HttpGet("GetAll")]
+		public IActionResult GetAll()
+		{
+			return Ok(iuserRepository.GetAllUsers());
+		}
+
+		[HttpPost("Create")]
+		public IActionResult CreateUser(User user)
+		{
+			return Ok(iuserRepository.CreateUser(user));
+		}
+
+		[HttpPut("Update")]
+		public IActionResult UpdateUser(User user) 
+		{
+			return Ok(iuserRepository.UpdateUser(user));
+		}
+
+		[HttpDelete("Delete")]
+		public IActionResult DeleteUser(User user)
+		{
+			return Ok(iuserRepository.DeleteUser(user));
+		}
+
+
+	}
+}
+    ```
+8. Program.cs-> After Line-5, Add
+```csharp
+builder.Services.AddDbContext<ApplicationDbContext>(t => t.UseMySql(builder.Configuration.GetConnectionString("UsersConnection"), new MySqlServerVersion(new Version(8, 0, 35))));
+
+builder.Services.AddTransient<IUserRepository, UserRepository>();
+```
+10. run add-Migration Phase1 -> This will create a Migration file/folder
+11. update-database -> This will create database and tables in database
+12. run and test in swagger and Aish Karo
+### DatabaseFirst Basic
+1.scaffold-dbcontext "Server=localhost;User=root;Password=Autumn@2023;Database=usersdb" "Pomelo.EntityFrameworkCore.MySql" -OutputDir Models
