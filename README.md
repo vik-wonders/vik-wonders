@@ -1476,7 +1476,8 @@ namespace CRUDWebAPIWithMySQL
 ```
 7. appsetting.json-> Add   "ConnectionStrings": { "UsersConnection": "Server=localhost;port=3306;Database=UsersDb;User Id=root;Password=Autumn@2023;" },
 9. Add controler of type API UsersController.cs
-10. ```csharp
+
+```csharp
     using CRUDWebAPIWithMySQL.Models;
 using CRUDWebAPIWithMySQL.Repository;
 using Microsoft.AspNetCore.Http;
@@ -1523,13 +1524,17 @@ namespace CRUDWebAPIWithMySQL.Controllers
 	}
 }
 ```
+
 8. Program.cs-> After Line-5, Add
+
 
 ```csharp
 builder.Services.AddDbContext<ApplicationDbContext>(t => t.UseMySql(builder.Configuration.GetConnectionString("UsersConnection"), new MySqlServerVersion(new Version(8, 0, 35))));
 
 builder.Services.AddTransient<IUserRepository, UserRepository>();
+
 ```
+
 10. run add-Migration Phase1 -> This will create a Migration file/folder
 11. update-database -> This will create database and tables in database
 12. run and test in swagger and Aish Karo
