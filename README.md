@@ -886,6 +886,7 @@ For Hindrance to be closed, 04 conditions to be fulfilled
 1. User Role : can view all his created documents for specified project
 2. EIC Role : User Role + Packages assigned to him
 3. ppm : all documents of project assigned to him
+4. ppm with project ALL : all documents of all projects
 
 	    
 ## Encrypt data in MySql
