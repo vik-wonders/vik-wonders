@@ -858,6 +858,10 @@ In Web.Config
 7. units.zerodate is null (Never started)
 8. If TOC milestone is not achieved then unit is under construction i.e. ongoing
 
+## New Project Logic
+1. units.zerodate is null (Never started)
+2. units.completed= NULL
+
 ## Hindrance Register Logic
 ```sql
 SELECT
