@@ -1545,3 +1545,9 @@ builder.Services.AddTransient<IUserRepository, UserRepository>();
 12. run and test in swagger and Aish Karo
 ### DatabaseFirst Basic
 1.scaffold-dbcontext "Server=localhost;User=root;Password=Autumn@2023;Database=usersdb" "Pomelo.EntityFrameworkCore.MySql" -OutputDir Models
+
+
+## Jquery document ready and window on load
+```
+https://learn.jquery.com/using-jquery-core/document-ready/#:~:text=Code%20included%20inside%20%24(%20document,just%20the%20DOM%2C%20is%20ready.
+```
