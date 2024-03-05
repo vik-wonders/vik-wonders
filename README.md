@@ -1556,3 +1556,7 @@ https://learn.jquery.com/using-jquery-core/document-ready/#:~:text=Code%20includ
 ```
 https://stackoverflow.com/questions/7889765/remove-all-htmltags-in-a-string-with-the-jquery-text-function
 ```
+## Remove html tags from text mysql
+```
+SELECT REGEXP_REPLACE('<h4>This is a test <font color="#0000ff">string</font></h4>', '<[^>]*>+', '')
+```
