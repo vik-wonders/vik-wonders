@@ -1551,3 +1551,8 @@ builder.Services.AddTransient<IUserRepository, UserRepository>();
 ```
 https://learn.jquery.com/using-jquery-core/document-ready/#:~:text=Code%20included%20inside%20%24(%20document,just%20the%20DOM%2C%20is%20ready.
 ```
+
+## extract HTML text from HTML code using, Jquery , javascript
+```
+https://stackoverflow.com/questions/7889765/remove-all-htmltags-in-a-string-with-the-jquery-text-function
+```
