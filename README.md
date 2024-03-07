@@ -1560,3 +1560,7 @@ https://stackoverflow.com/questions/7889765/remove-all-htmltags-in-a-string-with
 ```
 SELECT REGEXP_REPLACE('<h4>This is a test <font color="#0000ff">string</font></h4>', '<[^>]*>+', '')
 ```
+## scrollbar styling
+```
+https://www.digitalocean.com/community/tutorials/css-scrollbars
+```
