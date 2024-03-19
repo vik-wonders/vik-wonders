@@ -1564,3 +1564,18 @@ SELECT REGEXP_REPLACE('<h4>This is a test <font color="#0000ff">string</font></h
 ```
 https://www.digitalocean.com/community/tutorials/css-scrollbars
 ```
+## Run .bat in Task Schedular
+```
+https://stackoverflow.com/questions/4437701/run-a-batch-file-with-windows-task-scheduler/29069646#29069646
+
+For those whose bat files are still not working in Windows 8 and 10+ Task Scheduler , one thing I would like to add to Ghazi's answer - after much suffering:
+
+Under Actions, Choose "Create BASIC task", not "Create Task"
+That did it for me, plus the other issues not to forget:
+
+Use quotes, if you need to, in your Start a program > program/script entry i.e "C:\my scripts\runme.bat" (or just use the Browse button)...
+Use the Start In path to your batch file, even though it says optional - BUT DON'T use quotes in the Start In field. (Crazy but true!)
+This worked without any need to trigger a command prompt. And it is the quickest and simplest method.
+
+(Sorry my rep is too low to add my Basic Task tip to Ghazi's comments)
+```
