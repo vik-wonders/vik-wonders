@@ -1379,6 +1379,139 @@ ORDER BY commng_date
 8. Sum of capacity of (First part + Second part) give the total capacity addition by NTPC irspective of decommissioned capacity.
 9. Sum of capacity of (First part + Second part + Third Part) give the capacity addition by NTPC while adjusting the decommissioned capacity. This will be the present commissioned capacity of NTPC.
 
+All 3 parts below
+```
+(
+    SELECT
+        commng_date,
+        CASE WHEN MONTH(commng_date) <= 3 THEN YEAR(commng_date) - 1 ELSE YEAR(commng_date)
+END AS FY,
+CONCAT(
+    c.project,
+    ' U#',
+    CONVERT(c.unit, CHAR(2))
+) AS Project,
+capacity AS 'Capacity',
+p.CommonName,
+p.Region,
+p.State,
+p.Latitude,
+p.Longitude,
+p.Fuel,
+p.Ownership
+FROM
+    vw_commng_mile c,
+    (
+    SELECT
+        ProjectName,
+        CommonName,
+        Region,
+        State,
+        Latitude,
+        Longitude,
+        Fuel,
+        Ownership
+    FROM
+        `Projects_ntpc`
+) AS p
+WHERE
+    achieved = 'A' AND c.capacity > 0 AND c.project = p.ProjectName
+UNION
+SELECT
+    v.commng_date,
+    v.FY,
+    v.Project,
+    c.Capacity,
+    p.CommonName,
+    p.Region,
+    p.State,
+    p.Latitude,
+    p.Longitude,
+    p.Fuel,
+    p.Ownership
+FROM
+    (
+    SELECT
+        commng_date,
+        CASE WHEN MONTH(commng_date) <= 3 THEN YEAR(commng_date) - 1 ELSE YEAR(commng_date)
+END AS FY,
+CONCAT(
+    c.project,
+    ' U#',
+    CONVERT(c.unit, CHAR(2))
+) AS Project,
+capacity AS 'Capacity',
+c.project AS 'pname'
+FROM
+    vw_commng_mile c
+WHERE
+    achieved = 'A' AND c.capacity = 0
+) AS v,
+(
+    SELECT
+        CONCAT(`Project`, ' U#', `Unit`) AS Project,
+        `dcomm_capacity` AS Capacity,
+        `Project` AS 'pname'
+    FROM
+        `Units`
+    WHERE
+        `dcomm_date` IS NOT NULL
+) AS c,
+(
+    SELECT
+        ProjectName,
+        CommonName,
+        Region,
+        State,
+        Latitude,
+        Longitude,
+        Fuel,
+        Ownership
+    FROM
+        `Projects_ntpc`
+) AS p
+WHERE
+    v.Project = c.Project AND v.pname = p.ProjectName AND c.pname = p.ProjectName
+ORDER BY
+    commng_date
+)
+UNION
+    (
+    SELECT
+        u.dcomm_date,
+        CASE WHEN MONTH(u.dcomm_date) <= 3 THEN YEAR(u.dcomm_date) - 1 ELSE YEAR(u.dcomm_date)
+END AS FY,
+CONCAT(u.`Project`, ' U#', u.`Unit`) AS Project,
+u.dcomm_capacity * -1 AS Capacity,
+p.CommonName,
+p.Region,
+p.State,
+p.Latitude,
+p.Longitude,
+p.Fuel,
+p.Ownership
+FROM
+    `Units` u,
+    (
+    SELECT
+        ProjectName,
+        CommonName,
+        Region,
+        State,
+        Latitude,
+        Longitude,
+        Fuel,
+        Ownership
+    FROM
+        `Projects_ntpc`
+) AS p
+WHERE
+    `dcomm_date` IS NOT NULL AND u.`Project` = p.ProjectName
+)
+ORDER BY
+    commng_date 
+```
+
 ## Django ORM to SQL
 ```
 https://amitness.com/2018/10/django-orm-for-sql-users/
