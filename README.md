@@ -1379,7 +1379,7 @@ ORDER BY commng_date
 8. Sum of capacity of (First part + Second part) give the total capacity addition by NTPC irspective of decommissioned capacity.
 9. Sum of capacity of (First part + Second part + Third Part) give the capacity addition by NTPC while adjusting the decommissioned capacity. This will be the present commissioned capacity of NTPC.
 
-All 3 parts below
+All 3 parts below seperated by UNION
 ```
 (
     SELECT
