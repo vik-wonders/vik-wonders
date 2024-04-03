@@ -1369,6 +1369,16 @@ WHERE
 ORDER BY commng_date
 
 ```
+1. Above query aims to list all commissioned units information.
+2. Units commissioning information is available in vw_commng_mile view which has Project,unit, capacity, comm milestone, comm date and milestone achieved flag.
+3. Upon decommissioning of a unit, its capacity is updated as 0 in Units table. However, its actual capacity and decomm date is captured in decomm_date and decomm_capacity fields.
+4. Above query is a union of two parts.
+5. First part lists all units in vw_commng_mile view which are in operation/commissioned i.e. capacity >0. This list is joined with Projects_ntpc table to get additional fields for unit like technology, ownership, fuel, state, lat - long etc.
+6. Second part list all decommissioned units. First Part (5) filters out decommissioned units by capacity >0. Then this This list is joined with Projects_ntpc table to get additional fields for unit like technology, ownership, fuel, state, lat - long etc.
+7. Third part may also added to above query which will be just same as Second part (6), but this will have units capacity in -ve and comm date as the decomm_date.
+8. Sum of capacity of (First part + Second part) give the total capacity addition by NTPC irspective of decommissioned capacity.
+9. Sum of capacity of (First part + Second part + Third Part) give the capacity addition by NTPC while adjusting the decommissioned capacity. This will be the present commissioned capacity of NTPC.
+
 ## Django ORM to SQL
 ```
 https://amitness.com/2018/10/django-orm-for-sql-users/
