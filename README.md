@@ -1722,3 +1722,66 @@ This worked without any need to trigger a command prompt. And it is the quickest
 
 (Sorry my rep is too low to add my Basic Task tip to Ghazi's comments)
 ```
+
+## vw_commng_mile view logic explained
+```sql
+SELECT
+    `m`.`Project` AS `project`,
+    `m`.`Unit` AS `unit`,
+    `m`.`Milestone` AS `commng_mile`,
+    `m`.`act_ant_date` AS `commng_date`,
+    `m`.`Achieved` AS `achieved`,
+    `u`.`Capacity` AS `capacity`
+FROM
+    (
+        `entertrack`.`MileStones` `m`
+    JOIN `entertrack`.`Units` `u`
+    )
+WHERE
+    `m`.`Project` = `u`.`Project` AND `m`.`Unit` = `u`.`Unit` AND CASE WHEN `m`.`Milestone` = 'Sync. with Coal' AND `m`.`act_ant_date` BETWEEN '1970/4/1' AND '2009/9/3' THEN `m`.`Milestone` = 'Sync. with Coal' ELSE CASE WHEN `m`.`Milestone` = 'Full Load' AND `m`.`act_ant_date` BETWEEN '2009/9/4' AND '2018/3/31' THEN `m`.`Milestone` = 'Full Load'
+END
+END
+UNION
+SELECT
+    `m`.`Project` AS `project`,
+    `m`.`Unit` AS `unit`,
+    `m`.`Milestone` AS `commng_mile`,
+    `m`.`act_ant_date` AS `act_ant_date`,
+    `m`.`Achieved` AS `achieved`,
+    `u`.`Capacity` AS `capacity`
+FROM
+    (
+        `entertrack`.`MileStones` `m`
+    JOIN `entertrack`.`Units` `u`
+    )
+WHERE
+    `m`.`Project` = `u`.`Project` AND `m`.`Unit` = `u`.`Unit` AND `m`.`Milestone` = 'TOC' AND CONCAT(
+        CONVERT(`m`.`Project` USING utf8mb4),
+        CAST(
+            `m`.`Unit` AS CHAR(2) CHARSET utf8mb4
+        )
+    ) IN(
+    SELECT
+        CONCAT(
+            CONVERT(
+                `entertrack`.`MileStones`.`Project` USING utf8mb4
+            ),
+            CAST(
+                `entertrack`.`MileStones`.`Unit` AS CHAR(2) CHARSET utf8mb4
+            )
+        ) AS `v`
+    FROM
+        `entertrack`.`MileStones`
+    WHERE
+        `entertrack`.`MileStones`.`Milestone` = 'Full Load' AND `entertrack`.`MileStones`.`act_ant_date` BETWEEN '2018/4/1' AND '2099/3/31'
+)
+```
+1. Above code aims to list commissioning milestones of all units
+2. Between '1970/4/1' AND '2009/9/3' : Sync with Coal was considered as milestones for unit commissioning.
+3. Between '2009/9/4' AND '2018/3/31' : Full Load was considered as milestones for unit commissioning.
+4. 2018/04/01 onwards TOC is considered milestones for commissioning.
+5. Above query is union of two parts
+6. First part queries Milestones table and lists all commissioning milestones for the period & milestone mentioned at (2) & (3) above. This is joined with Units table to get capacity of the unit.
+7. Second part queries Milestones table and lists all commissioning milestones for the period 2018/04/01 onwards. This is joined with Units table to get capacity of the unit.
+8. In second part in order to exclude the units covered in First Part and include only the units whose Full load is 01-04-2018 onwards a condition is applied matching Prohect-unit combination.
+9. This query lists all units from Milestones table irrespective of its being commissioned or not.
