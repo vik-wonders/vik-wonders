@@ -1785,3 +1785,8 @@ WHERE
 7. Second part queries Milestones table and lists all commissioning milestones for the period 2018/04/01 onwards. This is joined with Units table to get capacity of the unit.
 8. In second part in order to exclude the units covered in First Part and include only the units whose Full load is 01-04-2018 onwards a condition is applied matching Prohect-unit combination.
 9. This query lists all units from Milestones table irrespective of its being commissioned or not.
+
+## Script for file listing
+```
+Get-ChildItem -Path "." -Recurse -File | Select-Object FullName >> ppmnew_upload_10023165_FileListing_24052024.txt
+```
