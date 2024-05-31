@@ -845,7 +845,19 @@ In Web.Config
 ```
 <compilation debug="false" targetFramework="4.8">
 ```
-	    
+#### Disable running scripts in a folder
+add web.config in folder to stop running scripts
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <system.webServer>
+        <handlers>
+            <clear />
+            <add name="StaticFile" path="*" verb="*" modules="StaticFileModule,DefaultDocumentModule,DirectoryListingModule" resourceType="Either" requireAccess="Read" />
+        </handlers>
+    </system.webServer>
+</configuration>
+```
 	    
 	    
 ## Project/ Unit ongoing/completed logic
