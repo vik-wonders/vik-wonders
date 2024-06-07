@@ -858,7 +858,15 @@ add web.config in folder to stop running scripts
     </system.webServer>
 </configuration>
 ```
-	    
+#### Prevent browser back button
+```
+	<script type="text/javascript"> 
+		window.history.forward(); 
+		function noBack() { 
+			window.history.forward(); 
+		} 
+	</script> 
+```
 	    
 ## Project/ Unit ongoing/completed logic
 1. units.completed= -1 (Not Completed)
