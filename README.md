@@ -859,6 +859,7 @@ add web.config in folder to stop running scripts
 </configuration>
 ```
 #### Prevent browser back button
+https://www.geeksforgeeks.org/how-to-stop-browser-back-button-using-javascript/
 ```
 	<script type="text/javascript"> 
 		window.history.forward(); 
