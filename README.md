@@ -868,7 +868,11 @@ https://www.geeksforgeeks.org/how-to-stop-browser-back-button-using-javascript/
 		} 
 	</script> 
 ```
-	    
+
+#### Custom Validators in ASP .Net
+
+https://www.c-sharpcorner.com/UploadFile/puranindia/validation-controls-in-Asp-Net/#:~:text=The%20CustomValidator%20control%20in%20ASP,to%20do%20server%2Dside%20validation.
+
 ## Project/ Unit ongoing/completed logic
 1. units.completed= -1 (Not Completed)
 2. units.completed= 0 (Completed)
