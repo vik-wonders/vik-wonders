@@ -845,6 +845,9 @@ In Web.Config
 ```
 <compilation debug="false" targetFramework="4.8">
 ```
+#### Session TimeOut
+https://www.stigviewer.com/stig/microsoft_iis_10.0_site/2021-03-24/finding/V-218763
+
 #### Disable running scripts in a folder
 add web.config in folder to stop running scripts
 ```
