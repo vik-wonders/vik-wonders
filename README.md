@@ -900,7 +900,8 @@ https://www.c-sharpcorner.com/UploadFile/puranindia/validation-controls-in-Asp-N
 1. units.zerodate is null (Never started)
 2. units.completed= NULL
 
-## Hindrance Register Logic
+## Hindrance Register
+###  status Logic
 ```sql
 SELECT
     IF(
@@ -923,6 +924,9 @@ For Hindrance to be closed, 04 conditions to be fulfilled
 1. NTPC and Agency, both must accept
 2. Resolution must be given i.e. resolution field should not be empty
 3. End date must be provided
+
+###  Auth logic
+1. If project is ALL then all projects else all the projec
 
 ## DMS View Logic
 1. User Role : can view all his created documents for specified project
