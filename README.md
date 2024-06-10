@@ -876,6 +876,16 @@ https://www.geeksforgeeks.org/how-to-stop-browser-back-button-using-javascript/
 
 https://www.c-sharpcorner.com/UploadFile/puranindia/validation-controls-in-Asp-Net/#:~:text=The%20CustomValidator%20control%20in%20ASP,to%20do%20server%2Dside%20validation.
 
+#### Generate new session in ASP .Net to mitigate session fixation and session hijacking
+```
+                Dim session_eid As String = Session("eid").ToString()
+                Session.Abandon()
+                Dim Generator As System.Random = New System.Random()
+                Dim r_no = Generator.Next(10000, 999999)
+                Response.Cookies.Add(New HttpCookie("ASP.NET_SessionId", UserHostAddress() & ClientBrowserName() & r_no))
+                Session("eid") = session_eid
+```
+
 ## Project/ Unit ongoing/completed logic
 1. units.completed= -1 (Not Completed)
 2. units.completed= 0 (Completed)
