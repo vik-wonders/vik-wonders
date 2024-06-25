@@ -1834,7 +1834,7 @@ Get-ChildItem -Path "." -Recurse -File | Select-Object FullName >> ppmnew_upload
 ```
 ## Presentation (PPT) to Image extraction (PPT2Image)
 1. This is a console application
-2.Packages Installed
+2. Packages Installed
 ```
   <ItemGroup>
     <PackageReference Include="Microsoft.Office.Interop.PowerPoint" Version="15.0.4420.1018" />
