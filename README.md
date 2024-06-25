@@ -1832,3 +1832,29 @@ WHERE
 ```
 Get-ChildItem -Path "." -Recurse -File | Select-Object FullName >> ppmnew_upload_10023165_FileListing_24052024.txt
 ```
+## Presentation (PPT) to Image extraction (PPT2Image)
+1. This is a console application
+2.   <ItemGroup>
+    <PackageReference Include="Microsoft.Office.Interop.PowerPoint" Version="15.0.4420.1018" />
+    <PackageReference Include="MicrosoftOfficeCore" Version="15.0.0" />
+    <PackageReference Include="MySql.Data" Version="8.3.0" />
+  </ItemGroup>
+  3. Installed with NuGet Package Manager 
+  4. Usage above components Microsoft.Office.Interop.PowerPoint to operate upon ppt files.
+  5. This will work only when MS Office is installed on server.
+
+```c#
+        static void ExtractSlidesAsImages(string pptFilePath, string outputFolderPath)
+        {
+            var app = new Microsoft.Office.Interop.PowerPoint.Application();
+            var presentation = app.Presentations.Open(pptFilePath, MsoTriState.msoFalse, MsoTriState.msoFalse, MsoTriState.msoFalse);
+                for (int i = 1; i <= presentation.Slides.Count; i++)
+                {
+                    string imagePath = Path.Combine(outputFolderPath, $"Slide_{i}.png");
+                    presentation.Slides[i].Export(imagePath, "PNG", (int)presentation.PageSetup.SlideWidth, (int)presentation.PageSetup.SlideHeight);
+                }
+            presentation.Close();
+            app.Quit();
+	}
+```
+
