@@ -1863,7 +1863,7 @@ Get-ChildItem -Path "." -Recurse -File | Select-Object FullName >> ppmnew_upload
 ## ASP .NET GridView Sorting
 1. Set allowsorting="true" in gridview
 2. Save datatable in session variable
-```
+```vb
  Private Sub GV_DocListForUpload_Sorting(sender As Object, e As GridViewSortEventArgs) Handles GV_DocListForUpload.Sorting
      Dim dtrslt As DataTable = CType(Session("dt_report"), DataTable)
 
