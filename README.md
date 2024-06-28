@@ -1860,4 +1860,29 @@ Get-ChildItem -Path "." -Recurse -File | Select-Object FullName >> ppmnew_upload
             app.Quit();
 	}
 ```
+## ASP .NET GridView Sorting
+1. Set allowsorting="true" in gridview
+2. Save datatable in session variable
+```
+ Private Sub GV_DocListForUpload_Sorting(sender As Object, e As GridViewSortEventArgs) Handles GV_DocListForUpload.Sorting
+     Dim dtrslt As DataTable = CType(Session("dt_report"), DataTable)
 
+     If dtrslt.Rows.Count > 0 Then
+
+         If Convert.ToString(Session("dt_report_sortdir").ToString()) = "Asc" Then
+             dtrslt.DefaultView.Sort = e.SortExpression & " Desc"
+             Session("dt_report_sortdir") = "Desc"
+         Else
+             dtrslt.DefaultView.Sort = e.SortExpression & " Asc"
+             Session("dt_report_sortdir") = "Asc"
+         End If
+
+         GV_DocListForUpload.DataSource = dtrslt
+         GV_DocListForUpload.DataBind()
+
+         GV_DocListForUpload.HeaderRow.TableSection = TableRowSection.TableHeader
+         GV_DocListForUpload.Caption = ""
+
+     End If
+ End Sub
+```
