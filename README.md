@@ -1886,3 +1886,6 @@ Get-ChildItem -Path "." -Recurse -File | Select-Object FullName >> ppmnew_upload
      End If
  End Sub
 ```
+
+## MySQL running Total
+https://www.geeksforgeeks.org/how-to-compute-a-running-total-in-mysql/
