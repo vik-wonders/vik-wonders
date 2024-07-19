@@ -1811,14 +1811,17 @@ https://www.geeksforgeeks.org/how-to-compute-a-running-total-in-mysql/
 ### datatabled.net Basic Structure
 ```javascript   
          $('#tb_detailed').DataTable({
-
+		//below two lines to disable default sort of 1st column
                 columnDefs: [{ orderable: false, targets: 0 }],
                 order: [[1, 'asc']],
-                colReorder: true,
+		//below two to make row column draggable
+		colReorder: true,
                 rowReorder: true,
-                "iDisplayLength": 25,
+		//below to set page size
+		"iDisplayLength": 25,
                 dom: 'Bfrtip',
-                fixedHeader: true,
+		//below for fixed header
+		fixedHeader: true,
                 "ordering": true,
                 buttons: ['excel',
                     {
