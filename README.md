@@ -445,29 +445,7 @@ PS C:\Windows\system32> quser
 PS C:\Windows\system32> logoff <sessionID>
 ```
 
-## Datatables.net excel export hyperlink rendering for Safety Register Dashboard
 
-https://stackoverflow.com/questions/40243616/jquery-datatables-export-to-excelhtml5-hyperlink-issue
-https://datatables.net/extensions/buttons/examples/html5/excelTextBold.html
-https://datatables.net/reference/button/excelHtml5#Built-in-styles
-
-
-```javascript
-buttons: [ {
-			extend: 'excelHtml5',
-			customize: function( xlsx ) {
-				var sheet = xlsx.xl.worksheets['sheet1.xml'];
-
-				$('row c[r^="I"]', sheet).each(function () {
-						$(this).attr('t', 'str');
-						$(this).append('<f>' + 'HYPERLINK("' + $('is t', this).text() + '","link")' + '</f>');
-						$('is', this).remove();
-						$(this).attr( 's', '4' );
-				});
-			}
-		} ],
-
-```
 
 ## Django template Language
 
@@ -1035,29 +1013,7 @@ https://skillstek.com/sap-versions/
 ## Badminton Rules
 https://www.bbc.co.uk/bitesize/guides/zp9ck7h/revision/3
 	    
-## Datatable.net conditional cell background color
-```javascript
-            $('#tb').DataTable({
-                "order": [0, "asc"], "paging": true, "lengthMenu": [10, 25, 50, "All"], "iDisplayLength": 200, "searching": true, "fixedHeader": true, dom: 'Bfrtip', buttons: ['excel',
-                    {
-                        extend: 'pdfHtml5',
-                        orientation: 'landscape',
-                        pageSize: 'LEGAL'
-                    }
-                ], rowGroup: {
 
-                    dataSrc: 0
-                },
-                columnDefs: [{ targets: 0, visible: false }],
-                'rowCallback': function (row, data, index) {
-                    //console.log("Data :" + data[3] + ", type : " + typeof data[3]);
-                 if (data[3] == "0") {
-                     $(row).find('td:eq(2)').css('background', 'red');
-                     //$(row).css('color', 'red');
-                }
-                }
-            });
-```
 ## CAPTCHA
 1. https://www.c-sharpcorner.com/article/asp-net-webform-user-registration-with-captcha/
 2. https://help.syncfusion.com/aspnet/captcha/getting-started
@@ -1194,32 +1150,7 @@ ORDER BY
 11. This is then Joined with  Hindrance_reg on  ongoingprojtable.project = Hindrance_reg.project. "-FGD is removed as that is required to match the project name"
 12. Then  Hindrance_reg.start_date between '2023-07-01' and '2023-07-16' : filter is applied for period of hindrances
 
-## Jquery DataTables.net Audo fill serial No in Table
-```javascript
-<script>  $(document).ready(function () {
 
-  	$('.dtable').DataTable({
-            "paging": true, "iDisplayLength": 200, "searching": true, dom: 'Bfrtip', order: [[1, 'asc']],
-  		buttons: ['excel',
-		   {
-		   	extend: 'pdfHtml5',
-		   	orientation: 'landscape',
-		   	pageSize: 'A3'
-
-		   }
-  		],
-			fixedHeader: true,
-            "fnRowCallback": function (nRow, aData, iDisplayIndex, iDisplayIndexFull) {
-                //debugger;
-                var index = iDisplayIndexFull + 1;
-                $("td:first", nRow).html(index);
-                return nRow;
-            }
-  	});
-
-  });
-    </script>
-```
 
 ## Capex Invoice pending with EIC
 ```vb
@@ -1272,22 +1203,7 @@ Select the column: xxx
     window.onbeforeunload = DisableButton;
 </script>
 ```
-## Jquery Datatables custom date sorting
-#### Add below .js below datatables.min.js
-1. https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js
-2. https://cdn.datatables.net/plug-ins/1.13.6/sorting/datetime-moment.js
-3. Initialise as below
-   ```javascript
-       <script type="text/javascript">
-        $(document).ready(function () {
 
-            $.fn.dataTable.moment('DD-MMM-YY');
-   .
-   .
-   .
-   ```
-   4. moment.js documentation of date formats
-   5. http://momentjs.com/docs/#/displaying/
 
 ## Bootstrap color hex codes
 https://mdbootstrap.com/docs/standard/extended/colors-code/
@@ -1889,3 +1805,143 @@ Get-ChildItem -Path "." -Recurse -File | Select-Object FullName >> ppmnew_upload
 
 ## MySQL running Total
 https://www.geeksforgeeks.org/how-to-compute-a-running-total-in-mysql/
+
+## Jquery Datatables.net
+
+### datatabled.net Basic Structure
+```javascript   
+         $('#tb_detailed').DataTable({
+
+                columnDefs: [{ orderable: false, targets: 0 }],
+                order: [[1, 'asc']],
+                colReorder: true,
+                rowReorder: true,
+                "iDisplayLength": 25,
+                dom: 'Bfrtip',
+                fixedHeader: true,
+                "ordering": true,
+                buttons: ['excel',
+                    {
+                        extend: 'pdfHtml5',
+                        orientation: 'landscape',
+                        pageSize: 'A3'
+                    }
+
+                ]
+
+                //,
+
+                //rowGroup: {
+
+                //    dataSrc: 0
+                //},
+                //columnDefs: [{ targets: 0, visible: false }]
+            });
+
+```
+
+### Datatables.net excel export hyperlink rendering for Safety Register Dashboard
+
+https://stackoverflow.com/questions/40243616/jquery-datatables-export-to-excelhtml5-hyperlink-issue
+https://datatables.net/extensions/buttons/examples/html5/excelTextBold.html
+https://datatables.net/reference/button/excelHtml5#Built-in-styles
+
+
+```javascript
+buttons: [ {
+			extend: 'excelHtml5',
+			customize: function( xlsx ) {
+				var sheet = xlsx.xl.worksheets['sheet1.xml'];
+
+				$('row c[r^="I"]', sheet).each(function () {
+						$(this).attr('t', 'str');
+						$(this).append('<f>' + 'HYPERLINK("' + $('is t', this).text() + '","link")' + '</f>');
+						$('is', this).remove();
+						$(this).attr( 's', '4' );
+				});
+			}
+		} ],
+
+```
+
+
+
+### Datatable.net conditional cell background color
+```javascript
+            $('#tb').DataTable({
+                "order": [0, "asc"], "paging": true, "lengthMenu": [10, 25, 50, "All"], "iDisplayLength": 200, "searching": true, "fixedHeader": true, dom: 'Bfrtip', buttons: ['excel',
+                    {
+                        extend: 'pdfHtml5',
+                        orientation: 'landscape',
+                        pageSize: 'LEGAL'
+                    }
+                ], rowGroup: {
+
+                    dataSrc: 0
+                },
+                columnDefs: [{ targets: 0, visible: false }],
+                'rowCallback': function (row, data, index) {
+                    //console.log("Data :" + data[3] + ", type : " + typeof data[3]);
+                 if (data[3] == "0") {
+                     $(row).find('td:eq(2)').css('background', 'red');
+                     //$(row).css('color', 'red');
+                }
+                }
+            });
+```
+
+
+
+### Jquery DataTables.net Audo fill serial No in Table
+```javascript
+<script>  $(document).ready(function () {
+
+  	$('.dtable').DataTable({
+            "paging": true, "iDisplayLength": 200, "searching": true, dom: 'Bfrtip', order: [[1, 'asc']],
+  		buttons: ['excel',
+		   {
+		   	extend: 'pdfHtml5',
+		   	orientation: 'landscape',
+		   	pageSize: 'A3'
+
+		   }
+  		],
+			fixedHeader: true,
+            "fnRowCallback": function (nRow, aData, iDisplayIndex, iDisplayIndexFull) {
+                //debugger;
+                var index = iDisplayIndexFull + 1;
+                $("td:first", nRow).html(index);
+                return nRow;
+            }
+  	});
+
+  });
+    </script>
+```
+
+
+
+
+### Jquery Datatables custom date sorting
+#### Add below .js below datatables.min.js
+1. https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js
+2. https://cdn.datatables.net/plug-ins/1.13.6/sorting/datetime-moment.js
+3. Initialise as below
+   ```javascript
+       <script type="text/javascript">
+        $(document).ready(function () {
+
+            $.fn.dataTable.moment('DD-MMM-YY');
+   .
+   .
+   .
+   ```
+   4. moment.js documentation of date formats
+   5. http://momentjs.com/docs/#/displaying/
+
+
+
+
+
+
+
