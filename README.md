@@ -432,10 +432,17 @@ https://stackoverflow.com/questions/49881751/multiindex-pivot-table-with-subtota
 https://docs.microsoft.com/en-us/previous-versions/dotnet/articles/ms972976(v=msdn.10)?redirectedfrom=MSDN
 
 
-## Power BI Table S.No
+## Power BI Table
+### S.No
 ```
 sno=calculate( countrows(table),filter(allselected(table),table[column] <= max(table[column])))
 ```
+### Last Refresh Date and Time
+```
+https://learn.microsoft.com/en-us/azure/devops/report/powerbi/add-last-refresh-time?view=azure-devops&tabs=private
+```
+
+
 
 ## Manage user RDP sessions on Windows Server 2012
 ```shell
