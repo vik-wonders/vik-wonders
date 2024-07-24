@@ -1652,7 +1652,7 @@ builder.Services.AddTransient<IUserRepository, UserRepository>();
 11. update-database -> This will create database and tables in database
 12. run and test in swagger and Aish Karo
 ### DatabaseFirst Basic
-1.scaffold-dbcontext "Server=localhost;User=root;Password=Autumn@2023;Database=usersdb" "Pomelo.EntityFrameworkCore.MySql" -OutputDir Models
+1.scaffold-dbcontext "Server=10.4.8.82;User=admin;Password=nimda;Database=entertrack" "Pomelo.EntityFrameworkCore.MySql" -OutputDir Models -Tables Projects_ntpc,Packages,MileStones, Units, FGD_MileStones -f
 
 
 ## Jquery document ready and window on load
