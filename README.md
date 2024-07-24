@@ -1653,6 +1653,7 @@ builder.Services.AddTransient<IUserRepository, UserRepository>();
 12. run and test in swagger and Aish Karo
 ### DatabaseFirst Basic
 1.scaffold-dbcontext "Server=10.4.8.82;User=admin;Password=nimda;Database=entertrack" "Pomelo.EntityFrameworkCore.MySql" -OutputDir Models -Tables Projects_ntpc,Packages,MileStones, Units, FGD_MileStones -f
+2. Help video on Database First : https://www.youtube.com/watch?v=FGsXzIgFgJg
 
 
 ## Jquery document ready and window on load
