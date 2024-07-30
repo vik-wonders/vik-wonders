@@ -911,7 +911,17 @@ For Hindrance to be closed, 04 conditions to be fulfilled
 3. End date must be provided
 
 ###  Auth logic
-1. If project is ALL then all projects else all the projec
+#### Project :
+1. Projects (i.e. project of Packages table) should be on different rows along with required comma seperated packages ids of the project
+2. In User_prefs-> getDBSingleHashSepearated : return a hash seperated string of all projects on all rows
+3. Hash seperated Projects in a single row will not work as exact project name is matched to get package list
+4. **if project is ALL then all projects else as per the list of projects on all rows**
+
+#### Resp :
+1. From first row as it must be same for all rows.
+
+#### package list
+1. In ddlProject_SelectedIndexChanged -> **If package is 0 then ALL PACKAGES** of selected project else the list of packages mentioned against project in apps_logins
 
 ## DMS View Logic
 1. User Role : can view all his created documents for specified project
