@@ -1966,4 +1966,8 @@ buttons: [ {
 Run in Power Shell Get-ChildItem 'HKLM:\SOFTWARE\Microsoft\NET Framework Setup\NDP' -Recurse | Get-ItemProperty -Name Version -EA 0 | Where-Object { $_.PSChildName -Match '^(?!S)\p{L}'} | Select-Object -ExpandProperty Version
 
 
+## Deploy/ Publish Django website on IIS in Windows Server
+### Useful Link
+https://blog.devgenius.io/deploy-django-app-to-iis-windows-server-beginners-guide-with-images-3d03b6fd5b7e
+
 
