@@ -1976,4 +1976,14 @@ https://www.tektutorialshub.com/crystal-reports/how-to-create-crystal-reports-in
 #### download CR for VS 
 https://www.tektutorialshub.com/crystal-reports/crystal-reports-download-for-visual-studio/
 
-
+1. Main problem being faced in publishing PRIMS web app was package dependency mismatch and version mismatch.
+2. The CrystalDecisions.* packages available on nuget are also of different versions. So even after lot of hits and trials version mismatch and dependency mismatch problem persisted.
+3. In eralier successful attempt we learnt that enable 32 app mode in application pool in IIS solved, log4net dependency issue.
+4. I was working in VS-2022. However, i figured out that VS-2022 has limited support for .NET framework application i.e. for WebForm. Therefore I  installed VS-2019, which is last of VS versions to support web forms.
+5. Finally we could get success by following aforementioned tutorial
+6. relative path of .rpt file can be  given to document viewer source file.
+7. IN our case database connection and query are embedded inside the .rpt file.
+8. Our .rpt files get databsse connection from System DSN in ODBS setting under Administrative tools. There connection name should be entertrack and it should be of 32 bit.
+9. Step 8 is required to configure Crystal Report -2011 as well.
+10. In order to update and fix database related issues in reports, simply open them in CR-2011 and run databse expert and update report data and then SAVE the report.
+11. WHen we could open a report in newly developed at step-5, we copied all dll files from bin folser to bin folder of our existing prims web App
