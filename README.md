@@ -1987,3 +1987,6 @@ https://www.tektutorialshub.com/crystal-reports/crystal-reports-download-for-vis
 9. Step 8 is required to configure Crystal Report -2011 as well.
 10. In order to update and fix database related issues in reports, simply open them in CR-2011 and run databse expert and update report data and then SAVE the report.
 11. WHen we could open a report in newly developed at step-5, we copied all dll files from bin folser to bin folder of our existing prims web App
+12. Update version number in PRIMS .aspx, web.config (.2000 -> .4000)
+13. web.config to have CrystalImageHandler under businessObjects to display images
+14. 
