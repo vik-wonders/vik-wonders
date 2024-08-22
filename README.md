@@ -1989,4 +1989,5 @@ https://www.tektutorialshub.com/crystal-reports/crystal-reports-download-for-vis
 11. WHen we could open a report in newly developed at step-5, we copied all dll files from bin folser to bin folder of our existing prims web App
 12. Update version number in PRIMS .aspx, web.config (.2000 -> .4000)
 13. web.config to have CrystalImageHandler under businessObjects to display images
-14. crystalreportviewers13 foilder should be available in the PRIMS folder and its path should be configured in web.config with key name "ResourceUri"
+14. crystalreportviewers13 folder should be available in the PRIMS folder
+15. A virtual directory having name crystalreportviewers13 to be added to PRIMS web app as virtual directort. and then virtual directory to referenced in web.config with key name "ResourceUri"
