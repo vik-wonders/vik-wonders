@@ -1970,4 +1970,10 @@ Run in Power Shell Get-ChildItem 'HKLM:\SOFTWARE\Microsoft\NET Framework Setup\N
 ### Useful Link
 https://blog.devgenius.io/deploy-django-app-to-iis-windows-server-beginners-guide-with-images-3d03b6fd5b7e
 
+## How to Create Crystal Reports in ASP.NET Webforms
+https://www.tektutorialshub.com/crystal-reports/how-to-create-crystal-reports-in-asp-net-webforms/
+
+#### download CR for VS 
+https://www.tektutorialshub.com/crystal-reports/crystal-reports-download-for-visual-studio/
+
 
