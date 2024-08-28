@@ -1991,3 +1991,40 @@ https://www.tektutorialshub.com/crystal-reports/crystal-reports-download-for-vis
 13. web.config to have CrystalImageHandler under businessObjects to display images
 14. crystalreportviewers13 folder should be available in the PRIMS folder
 15. A virtual directory having name crystalreportviewers13 to be added to PRIMS web app as virtual directort. and then virtual directory to referenced in web.config with key name "ResourceUri"
+
+## Driver.js for Animated website tours
+1. Add the reference to css and js files
+```
+<!-- For Driver.js-->
+<script src="https://cdn.jsdelivr.net/npm/driver.js@1.0.1/dist/driver.js.iife.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/driver.js@1.0.1/dist/driver.css"/>
+```
+
+2. Then Modify the website_tour() and then call this function from whereever you want
+```
+    <script>
+        function website_tour() {
+            const driver = window.driver.js.driver;
+            const driverObj = driver({
+                showProgress: true,
+                overlayColor: 'blue',
+                steps: [
+                    { element: '#ddl_projectlist', popover: { title: 'Project List', description: 'List of projects having material expediting requests registered in the system. Select a project to filter the requests' } },
+                    { element: '.tour', popover: { title: 'Material required at site by', description: 'Give a range of dates by which material is required at site.' } },
+                    { element: '#ddl_ceg_locations', popover: { title: 'CEG Executives', description: 'List of all CEG executives. Select an executive from list to filter all requests assigned to him/ her' } },
+                    { element: '#btn_filter', popover: { title: 'SHow Requests', description: 'Click to display requests as per the filteration criteria specified' } },
+                    { element: '#btn_filter_rep2', popover: { title: 'Chronology Register', description: 'Click to display updates grouped under Highlight, Execption and Status, as per the filteration criteria specified' } },
+                    { element: '#card_total', popover: { title: 'Total', description: 'Count of Material supply expediting requests registered in the system' } },
+                    { element: '#card_new', popover: { title: 'Total', description: 'Count of requests for which no update has been yet given by CEG' } },
+                    { element: '#card_partial', popover: { title: 'Total', description: 'Count of requests which are assigned to CEG executive and under process' } },
+                    { element: '#card_closed', popover: { title: 'Total', description: 'Count of requests which have been closed. Click on this to see list of all closed requests' } },
+                    { element: '#GV_DocListForUpload_filter', popover: { title: 'Search', description: 'search the requests' } },
+                    { element: '#img_profile', popover: { title: 'Reports', description: 'Click here to view link to CEG weekly report' } },
+   
+                ]
+            });
+
+            driverObj.drive();
+        }
+    </script>
+```
