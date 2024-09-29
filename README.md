@@ -2030,3 +2030,6 @@ https://www.tektutorialshub.com/crystal-reports/crystal-reports-download-for-vis
 ```
 ## AI/ML i.e. Artificial Intelligence and Machine Learning
 1. https://www.jeremymorgan.com/blog/generative-ai/local-llm-ubuntu/
+
+## google chrome not launching in ubuntu
+rm ~/.config/google-chrome/ -rf
