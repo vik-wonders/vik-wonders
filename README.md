@@ -1960,6 +1960,39 @@ buttons: [ {
    4. moment.js documentation of date formats
    5. http://momentjs.com/docs/#/displaying/
 
+### Jquery Datatables row selection
+1. https://datatables.net/extensions/select/examples/initialisation/simple.html
+```javascript
+new DataTable('#example', {
+    select: true
+});
+```
+### Jquery Datatables export only selected row/ column
+1. https://live.datatables.net/qulobefi/1/edit
+```javascript
+$(document).ready( function () {
+  var table = $('#example').DataTable({
+    dom: 'Bftirp',
+    
+    buttons: [
+            {
+                extend: 'copyHtml5',
+                exportOptions: {
+                    columns: ':visible',
+                    rows: ':visible'
+                }
+            },
+            {
+                extend: 'excelHtml5',
+                exportOptions: {
+                    columns: ':visible',
+                    rows: ':visible' 
+                }
+            },
+            'colvis'    ]
+  });
+} );
+```
 
 
 ## .NET Frameworks installed
