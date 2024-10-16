@@ -2003,6 +2003,19 @@ new DataTable('#myTable', {
 ```
 
 
+### Jquery Datatables change button text
+1. https://datatables.net/reference/option/pageLength
+```javascript
+var vik_table =new DataTable('#tbMain', {
+...
+});
+
+var button = vik_table.button(2);
+button.text('Custom Columns');
+```
+
+
+
 ## .NET Frameworks installed
 Run in Power Shell Get-ChildItem 'HKLM:\SOFTWARE\Microsoft\NET Framework Setup\NDP' -Recurse | Get-ItemProperty -Name Version -EA 0 | Where-Object { $_.PSChildName -Match '^(?!S)\p{L}'} | Select-Object -ExpandProperty Version
 
