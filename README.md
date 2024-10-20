@@ -918,10 +918,11 @@ For Hindrance to be closed, 04 conditions to be fulfilled
 4. **if project is ALL then all projects else as per the list of projects on all rows**
 
 #### Resp :
-1. From first row as it must be same for all rows.
+1. From first row as it must be **same for all rows.**
 
 #### package list
 1. In ddlProject_SelectedIndexChanged -> **If package is 0 then ALL PACKAGES** of selected project else the list of packages mentioned against project in apps_logins
+2. It doesnt aggregate package Ids from different rows. **All rows must have same Packages Ids**
 
 ## DMS View Logic
 1. User Role : can view all his created documents for specified project
