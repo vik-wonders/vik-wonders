@@ -924,6 +924,14 @@ For Hindrance to be closed, 04 conditions to be fulfilled
 1. In ddlProject_SelectedIndexChanged -> **If package is 0 then ALL PACKAGES** of selected project else the list of packages mentioned against project in apps_logins
 2. It doesnt aggregate package Ids from different rows. **All rows must have same Packages Ids**
 
+#### Best approach
+1. Keep only one row per user
+2. Projects # seperated
+3. Resp
+4. All combined packages comma seperated
+5. This will work
+
+
 ## DMS View Logic
 1. User Role : can view all his created documents for specified project
 2. EIC Role : User Role + Packages assigned to him
