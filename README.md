@@ -680,6 +680,7 @@ By default, Project Sites are no longer automatically created on first publish:
 
 ## Proxy Set-up in Debian through CLI
 https://computingforgeeks.com/how-to-set-system-proxy-on-debian-linux/
+https://chatgpt.com/share/67cec764-48f8-8008-84f1-c7a260ebf26e
 
 ## DPR Table Details
 1. Progress_template : Master list of all activities
