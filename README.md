@@ -2104,3 +2104,5 @@ rm ~/.config/google-chrome/ -rf
 2. Actual code to render chart is in time.php
 3. time.php being called from a function named timeline() defined in common.php
 4. timeline.php being called from m_dashboard.php
+
+Note : Keep prev_ext_sch_date null or else this will take these dates to plaot a line form "Invest approv schedule"
