@@ -2098,3 +2098,9 @@ https://www.tektutorialshub.com/crystal-reports/crystal-reports-download-for-vis
 
 ## google chrome not launching in ubuntu
 rm ~/.config/google-chrome/ -rf
+
+## Project Milestones chart logic
+1. Base Path /var/www/dp/ext
+2. Actual code to render chart is in time.php
+3. time.php being called from a function named timeline() defined in common.php
+4. timeline.php being called from m_dashboard.php
