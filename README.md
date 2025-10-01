@@ -2106,3 +2106,11 @@ rm ~/.config/google-chrome/ -rf
 4. timeline.php being called from m_dashboard.php
 
 Note : Keep prev_ext_sch_date null or else this will take these dates to plaot a line form "Invest approv schedule"
+
+
+## PM DB Server(10.4.8.82) Phpmyadmin not working as Apache not starting
+Issue is the Apache2 is not running and also on this server standard package for Apache2 is not running or configured. Rather a custom compiled package is running. Therefore the custom apache2 need to be started manually
+1. sudo /usr/local/apache2/bin/apachectl start
+2. sudo ss -tulnp | grep 80
+
+Now it should say that httpd already running and its listeninng on port 80. Now just browse for the phpmyadmin url. It should be up and running
